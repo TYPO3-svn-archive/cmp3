@@ -1,0 +1,33 @@
+
+
+source {
+	xmlfile = \Cmp3\Source\Fetcher
+	xmlfile.title = docbook xml file
+	xmlfile.fetcher = \Cmp3\Fetcher\File
+	xmlfile.fetcher {
+		type = DOCBOOK
+		url = EXT:cmp3/tests/fixture/docbook-example-cmp3.xml
+	}
+
+}
+
+
+#----- transformation -----------------------------------------------------
+
+transformation.docbook_to_icml = \Cmp3\Transformation\Xslt1
+transformation.docbook_to_icml {
+	chain {
+		10.stylesheet = EXT:cmp3/xsl/docbook2icml/docbook2icml.xsl
+	}
+}
+
+
+#----- JOB -----------------------------------------------------
+
+job.testDB2ICML1.title = Docbook XML File to ICML
+job.testDB2ICML1 {
+	parts {
+		10.source = xmlfile
+		10.transformation= docbook_to_icml
+	}
+}

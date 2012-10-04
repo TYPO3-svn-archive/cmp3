@@ -1,0 +1,35 @@
+
+
+Checklist
+
+- Header
+- package
+- subpackage
+- author
+
+- namepsace
+
+- class header
+- description
+- package
+- subpackage
+- author
+
+- throw new
+
+- \Next\dependency
+
+- remove unused stuff
+
+- tx_next
+
+- txApplication
+
+- Application
+
+
+------------------
+
+$Debug->Log()
+
+cleanup/merge Config

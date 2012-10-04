@@ -1,0 +1,54 @@
+
+
+source {
+
+	testHtmlProcessing= \Cmp3\Source\Fetcher
+	testHtmlProcessing.title = test html file with processing
+	testHtmlProcessing {
+		fetcher = \Cmp3\Fetcher\File
+		fetcher {
+			type = HTML
+			url = EXT:cmp3/tests/fixture/BaselineTypography.html
+		}
+		processing {
+			10 = \Cmp3\ContentProcessing\HtmlExtractBody
+		}
+	}
+
+
+	testHtmlTransformation= \Cmp3\Source\Fetcher
+	testHtmlTransformation.title = test html file with processing
+	testHtmlTransformation.fetcher = \Cmp3\Fetcher\File
+	testHtmlTransformation.fetcher {
+		type = HTML
+		url = EXT:cmp3/tests/fixture/BaselineTypography.html
+	}
+	testHtmlTransformation.processing {
+		10 = \Cmp3\ContentProcessor_XSLT1
+		10.stylesheet = EXT:cmp3/xsl/html2db/html2db.xsl
+		10.stylesheet = EXT:cmp3/xsl/html2docbook_4.xsl
+#TODO
+		10.type = DOCBOOK
+	}
+
+#TODO
+	xmlfile = \Cmp3\Source\Fetcher
+	xmlfile.title = cmp3xml file
+	xmlfile.fetcher = \Cmp3\Fetcher\File
+	xmlfile.fetcher {
+		type = CMP3XML
+		url = EXT:cmp3/tests/fixture/example01_cmp3xml.xml
+		processing {
+			10 = \Cmp3\ContentProcessor_XSLT1
+			10.stylesheet = EXT:cmp3/xsl/xxx.xsl
+		}
+	}
+	xmlfile.processing {
+		10 = \Cmp3\ContentProcessor_XSLT1
+		10.stylesheet = EXT:cmp3/xsl/xxx.xsl
+	}
+
+
+
+}
+

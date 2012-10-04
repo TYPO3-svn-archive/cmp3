@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:layout-master-set>
+    <fo:simple-page-master master-name="only">
+      <fo:region-body region-name="xsl-region-body" margin="0.7in" padding="0"/>
+      <fo:region-before region-name="xsl-region-before" extent="0.7in"/>
+      <fo:region-after region-name="xsl-region-after" extent="0.7in"/>
+    </fo:simple-page-master>
+  </fo:layout-master-set>
+  <fo:page-sequence master-reference="only">
+    <fo:flow flow-name="xsl-region-body" role="rich:">
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="2em" font-weight="bold" space-before="0.67em" space-after="0.67em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h1">baseline</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.5em" font-weight="bold" space-before="0.83em" space-after="0.83em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h2">a designer framework by ProjetUrbain.com</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="2em" font-weight="bold" space-before="0.67em" space-after="0.67em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h1">Typography</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">This page show basic HTML elements and how Baseline renders them. You don't need to change the way you code or learn CLASS or ID names, everything will work by including the baseline.type.css.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="2em" font-weight="bold" space-before="0.67em" space-after="0.67em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h1">Title — h1</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.5em" font-weight="bold" space-before="0.83em" space-after="0.83em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h2">Subtitle — h2</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.17em" font-weight="bold" space-before="1em" space-after="1em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h3">Subtitle — h3</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1em" font-weight="bold" space-before="1.17em" space-after="1.17em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h4">Subtitle — h4</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="0.83em" font-weight="bold" space-before="1.33em" space-after="1.33em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h5">Subtitle — h5</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="0.67em" font-weight="bold" space-before="1.67em" space-after="1.67em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h6">Subtitle — h6</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:list-block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:ul">
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item 01</fo:block></fo:list-item-body></fo:list-item>
+
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item 02</fo:block></fo:list-item-body></fo:list-item>
+
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item 03</fo:block></fo:list-item-body></fo:list-item>
+    </fo:list-block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" start-indent="inherited-property-value(start-indent) + 24pt" end-indent="inherited-property-value(end-indent) + 24pt" space-before="1em" space-after="1em" role="rich:blockquote">
+      <fo:block space-before="1em" space-after="1em" role="rich:p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+    </fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" border="1px inset" space-before="0.67em" space-after="0.67em" role="rich:hr"/>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.5em" font-weight="bold" space-before="0.83em" space-after="0.83em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h2">List Types</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.17em" font-weight="bold" space-before="1em" space-after="1em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h3">Ordered list</fo:block>
+
+    <fo:list-block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:ol">
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline>1.</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item</fo:block></fo:list-item-body></fo:list-item>
+
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline>2.</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item</fo:block></fo:list-item-body></fo:list-item>
+
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline>3.</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item
+
+        <fo:list-block space-before="0pt" space-after="0pt" role="rich:ol">
+          <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline>a.</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 2</fo:block></fo:list-item-body></fo:list-item>
+
+          <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline>b.</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 2
+
+            <fo:list-block space-before="0pt" space-after="0pt" role="rich:ol">
+              <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline>i.</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 3</fo:block></fo:list-item-body></fo:list-item>
+
+              <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline>ii.</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 3</fo:block></fo:list-item-body></fo:list-item>
+            </fo:list-block>
+          </fo:block></fo:list-item-body></fo:list-item>
+        </fo:list-block>
+      </fo:block></fo:list-item-body></fo:list-item>
+    </fo:list-block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.17em" font-weight="bold" space-before="1em" space-after="1em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h3">Unordered list</fo:block>
+
+    <fo:list-block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:ul">
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item 01</fo:block></fo:list-item-body></fo:list-item>
+
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item 02</fo:block></fo:list-item-body></fo:list-item>
+
+      <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item 03
+
+        <fo:list-block space-before="0pt" space-after="0pt" role="rich:ul">
+          <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="0.67em monospace" baseline-shift="0.25em">o</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 2</fo:block></fo:list-item-body></fo:list-item>
+
+          <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="0.67em monospace" baseline-shift="0.25em">o</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 2
+
+            <fo:list-block space-before="0pt" space-after="0pt" role="rich:ul">
+              <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="bold 0.9em sans-serif" baseline-shift="0.05em">-</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 3</fo:block></fo:list-item-body></fo:list-item>
+
+              <fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="bold 0.9em sans-serif" baseline-shift="0.05em">-</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block>List item level 3</fo:block></fo:list-item-body></fo:list-item>
+            </fo:list-block>
+          </fo:block></fo:list-item-body></fo:list-item>
+        </fo:list-block>
+      </fo:block></fo:list-item-body></fo:list-item>
+    </fo:list-block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.17em" font-weight="bold" space-before="1em" space-after="1em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h3">Definition List</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:dl">
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Definition list title</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">Definition list data</fo:block>
+
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Definition list title</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">Definition list data</fo:block>
+
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Definition list title</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">Definition list data</fo:block>
+    </fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.17em" font-weight="bold" space-before="1em" space-after="1em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h3">Dialog</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:dl">
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Costello</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">Look, you gotta first baseman?</fo:block>
+
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Abbott</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">Certainly.</fo:block>
+
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Costello</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">Who's playing first?</fo:block>
+
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Abbott</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">That's right.</fo:block>
+
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Costello</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">When you pay off the first baseman every month, who gets the money?</fo:block>
+
+      <fo:block keep-with-next.within-column="always" keep-together.within-column="always" role="rich:dt">Abbott</fo:block>
+
+      <fo:block start-indent="inherited-property-value(start-indent) + 24pt" role="rich:dd">Every dollar of it.</fo:block>
+    </fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.5em" font-weight="bold" space-before="0.83em" space-after="0.83em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h2">Blockquote</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" start-indent="inherited-property-value(start-indent) + 24pt" end-indent="inherited-property-value(end-indent) + 24pt" space-before="1em" space-after="1em" role="rich:blockquote">
+      <fo:block space-before="1em" space-after="1em" role="rich:p">Duis autem vel eum iriure dolor in hendrerit in <fo:inline role="rich:q">“vulputate velit esse molestie consequat”</fo:inline>, vel illum dolore eu feugiat nulla facilisis.</fo:block>
+    </fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.5em" font-weight="bold" space-before="0.83em" space-after="0.83em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h2">Tables</fo:block>
+
+    <fo:table-and-caption xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" display-align="center"><fo:table-caption text-align="center" start-indent="0pt" end-indent="0pt" text-indent="0pt" last-line-end-indent="0pt" text-align-last="relative" role="rich:caption"><fo:block>
+        table title
+      </fo:block></fo:table-caption><fo:table border-collapse="separate" border-spacing="2px" border="1px" role="rich:table"><fo:table-header start-indent="0pt" end-indent="0pt" text-indent="0pt" last-line-end-indent="0pt" text-align="start" text-align-last="relative" role="rich:thead">
+        <fo:table-row role="rich:tr">
+          <fo:table-cell font-weight="bolder" text-align="center" border="1px" padding="1px" role="rich:th"><fo:block>Table header 1</fo:block></fo:table-cell>
+
+          <fo:table-cell font-weight="bolder" text-align="center" border="1px" padding="1px" role="rich:th"><fo:block>Table header 2</fo:block></fo:table-cell>
+        </fo:table-row>
+      </fo:table-header><fo:table-footer start-indent="0pt" end-indent="0pt" text-indent="0pt" last-line-end-indent="0pt" text-align="start" text-align-last="relative" role="rich:tfoot">
+        <fo:table-row role="rich:tr">
+          <fo:table-cell border="1px" padding="1px" role="rich:td"><fo:block>Table footer, data 1</fo:block></fo:table-cell>
+
+          <fo:table-cell border="1px" padding="1px" role="rich:td"><fo:block>Table footer, data 2</fo:block></fo:table-cell>
+        </fo:table-row>
+      </fo:table-footer><fo:table-body start-indent="0pt" end-indent="0pt" text-indent="0pt" last-line-end-indent="0pt" text-align="start" text-align-last="relative" role="rich:tbody">
+        <fo:table-row role="rich:tr">
+          <fo:table-cell border="1px" padding="1px" role="rich:td"><fo:block>Table row 1, data 1</fo:block></fo:table-cell>
+
+          <fo:table-cell border="1px" padding="1px" role="rich:td"><fo:block>Table row 1, data 2</fo:block></fo:table-cell>
+        </fo:table-row>
+
+        <fo:table-row role="rich:tr">
+          <fo:table-cell border="1px" padding="1px" role="rich:td"><fo:block>Table row 2, data 1</fo:block></fo:table-cell>
+
+          <fo:table-cell border="1px" padding="1px" role="rich:td"><fo:block>Table row 2, data 2</fo:block></fo:table-cell>
+        </fo:table-row>
+      </fo:table-body></fo:table></fo:table-and-caption>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.5em" font-weight="bold" space-before="0.83em" space-after="0.83em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h2">Other markup code</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p"><fo:basic-link text-decoration="underline" color="blue" role="rich:a" external-destination="url('')">hyperlink</fo:basic-link><fo:block role="rich:br"/>
+    <fo:inline role="rich:abbr">abbreviation</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-weight="bolder" role="rich:b">offset text typically styled in bold</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-style="italic" role="rich:cite">cited title of a work</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-family="monospace" role="rich:code">code fragment</fo:inline><fo:block role="rich:br"/>
+    <fo:inline text-decoration="line-through" role="rich:del">deleted text</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-style="italic" role="rich:dfn">defining instance</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-style="italic" role="rich:em">emphatic stress</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-style="italic" role="rich:i">offset text typically styled in italic</fo:inline><fo:block role="rich:br"/>
+    <fo:inline text-decoration="underline" role="rich:ins">inserted text</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-family="monospace" role="rich:kbd">user input</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-family="monospace" role="rich:samp">sample output</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-size="smaller" role="rich:small">small print</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-weight="bolder" role="rich:strong">strong importance</fo:inline><fo:block role="rich:br"/>
+    <fo:inline baseline-shift="super" font-size="smaller" role="rich:sup">superscript</fo:inline> <fo:inline baseline-shift="sub" font-size="smaller" role="rich:sub">subscript</fo:inline><fo:block role="rich:br"/>
+    <fo:inline font-style="italic" role="rich:var">variable or placeholder text</fo:inline></fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-style="italic" role="rich:address">
+      contact information
+    </fo:block>
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="0.83em" font-family="monospace" white-space="pre" space-before="1em" space-after="1em" role="rich:pre">preformatted text
+</fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p">soft hyphen : <fo:inline font-family="monospace" role="rich:code">­</fo:inline></fo:block>
+
+    <fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" font-size="1.5em" font-weight="bold" space-before="0.83em" space-after="0.83em" keep-with-next.within-column="always" keep-together.within-column="always" role="rich:h2">White space</fo:block>
+
+    <fo:list-block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:ul">
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">en space : <fo:inline font-family="monospace" role="rich:code">&amp;#8194;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">em space : <fo:inline font-family="monospace" role="rich:code">&amp;#8195;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">3-per-em space : <fo:inline font-family="monospace" role="rich:code">&amp;#8196;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">4-per-em space : <fo:inline font-family="monospace" role="rich:code">&amp;#8197;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">6-per-em space : <fo:inline font-family="monospace" role="rich:code">&amp;#8198;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">figure space : <fo:inline font-family="monospace" role="rich:code">&amp;#8199;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">punctuation space : <fo:inline font-family="monospace" role="rich:code">&amp;#8200;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">thin space : <fo:inline font-family="monospace" role="rich:code">&amp;#8201;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+		<fo:list-item relative-align="baseline" role="rich:li"><fo:list-item-label end-indent="label-end()" text-align="end" wrap-option="no-wrap"><fo:block><fo:inline font="1em serif">•</fo:inline></fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:inline role="rich:span">hair space : <fo:inline font-family="monospace" role="rich:code">&amp;#8202;</fo:inline></fo:inline> <fo:inline role="rich:span"> </fo:inline></fo:block></fo:list-item-body></fo:list-item>
+    </fo:list-block>
+
+	<fo:block xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml" space-before="1em" space-after="1em" role="rich:p"><fo:inline font-size="smaller" role="rich:small">© 2011 Stéphane Curzi, <fo:basic-link text-decoration="underline" color="blue" role="rich:a" external-destination="url('http://www.projeturbain.com')">ProjetUrbain.com</fo:basic-link>.<fo:block role="rich:br"/>
+Content of this site is licensed under a <fo:basic-link text-decoration="underline" color="blue" role="rich:a" external-destination="url('http://creativecommons.org/licenses/by-sa/3.0/')">Creative Commons Attribution-Share Alike 3.0 Unported License</fo:basic-link>.</fo:inline></fo:block>
+
+</fo:flow>
+  </fo:page-sequence>
+</fo:root>

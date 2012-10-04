@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cmp3document>
+
+	<meta>
+		<!-- usually here's more stuff -->
+	</meta>
+
+	<!-- 'tree' has nodes, 'flat' doesn't and has just records -->
+
+	<content type="tree">
+		<!-- subtype = layout?! -->
+		<node type="page" subtype="default">
+
+			<record type="pages">
+				<!-- fields of page are here -->
+				<field name="title" type="text" format="line">
+					<meta />
+					<value>Bodenbelag</value>
+				</field>
+				<field name="subtitle" type="text" format="line">
+					<value></value>
+				</field>
+				<field name="description" type="text" format="multiline">
+					<value></value>
+				</field>
+				<field name="abstract" type="text" format="multiline">
+					<value></value>
+				</field>
+				<field name="author" type="text" format="line">
+					<value></value>
+				</field>
+				<field name="lastUpdated" type="text" format="date">
+					<value>01-01-1970</value>
+				</field>
+			</record>
+
+			<node type="group" subtype="plugin">
+				<!-- this is the plugin record -->
+				<record type="tt_content" subtype="plugin_9">
+					<!-- fields of plugin record are here -->
+					<field name="header" type="text" format="line">
+						<value>
+							<!-- h1-6 should be ignored here -->
+							<h1>Produkte</h1>
+						</value>
+					</field>
+				</record>
+
+				<!-- here comes the news records -->
+				<node type="group" subtype="records">
+					<record type="tt_news" subtype="news">
+
+						<!-- fields of record are here -->
+						<field name="header" type="text" format="line">
+							<value>
+								<h2>Haegar</h2>
+							</value>
+						</field>
+						<field name="bodytext" type="text" format="rich">
+							<value>
+								<p>
+									Und
+									<strong>bold</strong>
+									soooo schrecklich
+								</p>
+							</value>
+						</field>
+					</record>
+
+					<record type="tt_news" subtype="news2">
+						<field name="header" type="text" format="line">
+							<value>
+								<h3>Haegar</h3>
+							</value>
+						</field>
+
+						<image type="images" position="above">
+							<!-- imageobject is a fixed tag name -->
+							<imageobject align="center" float="none">
+								<alias>_var_www_cmp3_uploads_pics_haegar004.gif</alias>
+								<caption></caption>
+							</imageobject>
+						</image>
+
+						<field name="bodytext" type="text" format="rich">
+							<value>
+								<p>Und soooo schrecklich</p>
+							</value>
+						</field>
+					</record>
+
+				</node>
+			</node>
+
+
+			<node type="group" subtype="records">
+
+				<!-- no fields, this is just a group -->
+
+				<record type="tt_content" subtype="text">
+					<!-- fields of record are here -->
+					<field name="header" type="text" format="line">
+						<meta>
+							<ctype>header</ctype>
+						</meta>
+						<value>
+							<h3>Haegar</h3>
+						</value>
+					</field>
+
+					<field name="bodytext" type="text" format="rich">
+						<meta>
+							<ctype>body</ctype>
+						</meta>
+						<value>
+							<p>
+								Und
+								<strong>bold</strong>
+								soooo schrecklich
+							</p>
+						</value>
+					</field>
+				</record>
+
+				<record type="tt_content" subtype="textpic">
+					<field name="header" type="text" format="line">
+						<value>
+							<h3>Haegar</h3>
+						</value>
+					</field>
+
+					<image type="images" position="above">
+						<imageobject align="center" float="none">
+							<alias>_var_www_cmp3_uploads_pics_haegar004.gif</alias>
+							<caption></caption>
+						</imageobject>
+						<imageobject align="center" float="none">
+							<alias>_var_www_cmp3_uploads_pics_haegar5635.gif</alias>
+							<caption></caption>
+						</imageobject>
+					</image>
+
+					<field name="bodytext" type="text" format="rich">
+						<value>
+							<p>Und soooo schrecklich</p>
+						</value>
+					</field>
+				</record>
+
+			</node>
+
+
+
+
+			<node type="page" subtype="default">
+				<record type="pages">
+					<!-- fields of page are here -->
+					<field name="title" format="line">
+						<value>Noch eine Seite</value>
+					</field>
+					<field name="subtitle" format="line">
+						<value></value>
+					</field>
+					<field name="description" format="multiline">
+						<value></value>
+					</field>
+					<field name="abstract" format="multiline">
+						<value></value>
+					</field>
+					<field name="author" format="line">
+						<value></value>
+					</field>
+					<field name="lastUpdated" format="date">
+						<value>01-01-1970</value>
+					</field>
+				</record>
+
+				<node type="group" subtype="records">
+
+					<!-- no fields, this is just a group -->
+
+					<record type="tt_content" subtype="text">
+						<!-- fields of record are here -->
+						<field name="header" type="text" format="line">
+							<value>
+								<h1>gfdsgfsd</h1>
+							</value>
+						</field>
+
+						<field name="bodytext" type="text" format="rich">
+							<value>
+								<p>
+									Und
+									<strong>bold</strong>
+									soooo schrecklich
+								</p>
+							</value>
+						</field>
+					</record>
+
+				</node>
+			</node>
+
+
+
+		</node>
+
+	</content>
+</cmp3document>

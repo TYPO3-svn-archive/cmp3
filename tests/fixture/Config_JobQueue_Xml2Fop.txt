@@ -1,0 +1,35 @@
+
+
+source {
+	xmlfile = \Cmp3\Source\Fetcher
+	xmlfile.title = xml file
+	xmlfile.fetcher = \Cmp3\Fetcher\File
+	xmlfile.fetcher {
+		type = XML
+		url = EXT:cmp3/tests/fixture/fo-1/mydata.xml
+	}
+
+}
+
+
+#----- transformation -----------------------------------------------------
+
+transformation.xml_to_pdf_with_fop = \Cmp3\Transformation\Fop
+transformation.xml_to_pdf_with_fop {
+	stylesheet = EXT:cmp3/tests/fixture/fo-1/mydata.xsl
+	// config file for fop
+	engine.fop.config =
+	// cli parameter
+	engine.fop.parameter =
+}
+
+
+#----- JOB -----------------------------------------------------
+
+job.testFop1.title = XML File to PDF using FOP
+job.testFop1 {
+	parts {
+		10.source = xmlfile
+		10.transformation= xml_to_pdf_with_fop
+	}
+}

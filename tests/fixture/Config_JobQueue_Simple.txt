@@ -1,0 +1,41 @@
+
+
+source {
+
+	xmlfile = \Cmp3\Source\Fetcher
+	xmlfile.title = person xml file
+	xmlfile.fetcher = \Cmp3\Fetcher\File
+	xmlfile.fetcher {
+		type = XML
+		url = EXT:cmp3/tests/fixture/person.xml
+	}
+
+}
+
+
+
+#----- JOB -----------------------------------------------------
+
+
+job.testPreProcessing.title = XML File from file source with extra processing
+job.testPreProcessing {
+	parts {
+		10.source = xmlfile
+		10.preProcessing {
+			10 = \Cmp3\ContentProcessing\Xslt1
+			10.stylesheet = EXT:cmp3/tests/fixture/person.xsl
+		}
+	}
+}
+
+
+job.testPostProcessing.title = XML File from file source with extra processing
+job.testPostProcessing {
+	parts {
+		10.source = xmlfile
+		10.postProcessing {
+			10 = \Cmp3\ContentProcessing\Xslt1
+			10.stylesheet = EXT:cmp3/tests/fixture/person.xsl
+		}
+	}
+}

@@ -1,0 +1,33 @@
+
+
+source {
+
+	test1 = \Cmp3\Source\Fetcher
+	test1.title = test file 1
+	test1.fetcher = \Cmp3\Fetcher\File
+	test1.fetcher {
+		type = TEXT
+		url = EXT:cmp3/tests/fixture/test1.txt
+	}
+
+
+	test2 = \Cmp3\Source\Fetcher
+	test2.title = test file 2
+	test2.fetcher = \Cmp3\Fetcher\File
+	test2.fetcher {
+		type = TEXT
+		url = EXT:cmp3/tests/fixture/test2.txt
+	}
+
+
+	testhtml = \Cmp3\Source\Fetcher
+	testhtml.title = test html file
+	testhtml.fetcher = \Cmp3\Fetcher\File
+	testhtml.fetcher {
+		type = HTML
+		url = EXT:cmp3/tests/fixture/BaselineTypography.html
+	}
+
+
+}
+

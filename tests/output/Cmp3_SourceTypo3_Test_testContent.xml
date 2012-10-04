@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmp3document xmlns="http://www.bitmotion.de/cmp3/cmp3document" xmlns:cmp3="http://www.bitmotion.de/cmp3/cmp3document">
+  <meta/>
+  <content type="tree">
+    <node type="page" subtype="none">
+      <record type="pages" subtype="1" language="en">
+        <field name="uid" type="int" format="text">
+          <meta/>
+          <value>42</value>
+        </field>
+        <field name="pid" type="int" format="text">
+          <meta/>
+          <value>1</value>
+        </field>
+        <field name="tstamp" type="datetime" format="datetime">
+          <meta/>
+          <value>2012-04-18T14:12:32+02:00</value>
+        </field>
+        <field name="sorting" type="int" format="text">
+          <meta/>
+          <value>576</value>
+        </field>
+        <field name="deleted" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="perms_userid" type="int" format="text">
+          <meta/>
+          <value>1</value>
+        </field>
+        <field name="perms_groupid" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="perms_user" type="int" format="text">
+          <meta/>
+          <value>31</value>
+        </field>
+        <field name="perms_group" type="int" format="text">
+          <meta/>
+          <value>27</value>
+        </field>
+        <field name="perms_everybody" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="editlock" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="crdate" type="datetime" format="datetime">
+          <meta/>
+          <value>2010-09-06T11:45:47+02:00</value>
+        </field>
+        <field name="cruser_id" type="int" format="text">
+          <meta/>
+          <value>1</value>
+        </field>
+        <field name="title" type="text" format="line">
+          <meta/>
+          <value>Richtext</value>
+        </field>
+        <field name="doktype" type="int" format="text">
+          <meta/>
+          <value>1</value>
+        </field>
+        <field name="TSconfig" type="text" format="multline">
+          <meta/>
+          <value>mod.SHARED.colPos_list = 0&#13;
+&#13;
+&#13;
+RTE.default{&#13;
+            &#13;
+            enableWordClean = 1&#13;
+            removeTrailingBR = 1&#13;
+            removeComments = 1&#13;
+            removeTags = o:p, sdfield, strike, u&#13;
+            removeTagsAndContents = script&#13;
+            removeTags := removeFromList(font)&#13;
+            colors = color1,color19,color2,color3,color4,color5,color6,color7,color8,color9,color10,color11,color12,color13,color14,color15,color18,color16,color17 &#13;
+            disableColorPicker = 1&#13;
+            disableSelectColor = 0&#13;
+            showButtons = class, bold, italic, blockquote, subscript, superscript, textcolor, bgcolor, orderedlist, unorderedlist, outdent, indent, left, center, right, justifyfull, bar, insertcharacter, link, unlink, image, chMode, removeformat, findreplace, undo, redo, copy, cut, paste, table, toggleborders, tableproperties, bar, rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit, bar, columninsertbefore, columninsetafter, columndelette, columnsplit, bar, cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge, &#13;
+            #buttons.formattext.restrictTo := p, blockquote, div&#13;
+            buttons.formatblock.restrictToItems = p, div, size1, size2&#13;
+            keepButtonGroupTogether = 1&#13;
+            #showButtons:=addToList(blockstylable, blockstyle)&#13;
+            showStatusBar = 1&#13;
+            hidePStyleItems = pre, adress&#13;
+            disableContextMenu = 0&#13;
+            ignoreMainStyleOverride = 1&#13;
+            #classesTable = test&#13;
+            &#13;
+            classesParagraph = align-left, align-center, align-right, align-justify,indent,outdent&#13;
+            classesCharacter = color1,color19,color2,color3,color4,color5,color6,color7,color8,color9,color10,color11,color12,color13,color14,color15,color18,color16,color17 &#13;
+            #classesLinks = &#13;
+            showTagFreeClasses = 0&#13;
+                                         &#13;
+            &#13;
+  #Tabellen Optionen in der RTE Toolbar&#13;
+  hideTableOperationsInToolbar = 0&#13;
+  keepToggleBordersInToolbar = 0&#13;
+        &#13;
+  # Tabellen Editierungs-Optionen (cellspacing/ cellpadding / border)&#13;
+  disableSpacingFieldsetInTableOperations = 0&#13;
+  disableAlignmentFieldsetInTableOperations = 0&#13;
+  disableColorFieldsetInTableOperations = 0&#13;
+  disableLayoutFieldsetInTableOperations = 0&#13;
+  disableBordersFieldsetInTableOperations = 0&#13;
+}&#13;
+&#13;
+RTE.default.proc{&#13;
+               overruleMode = ts_css&#13;
+               dontConvBRtoParagraph = 1&#13;
+               remapParagraphTag = p&#13;
+               allowTagsOutside = span&#13;
+               allowTags = a, b, br, caption, cite, div, em, h1, h2, h3, h4, h5, h6, hr, i, img, li, link, ol, p, span, strong, sub, sup, table, tbody, thead, td, th, tr, tt, ul&#13;
+               denyTags &gt;&#13;
+               keepPDIVattribs = xml:lang&#13;
+               allowedClasses = align-left,align-center,align-right,align-justify,indent,outdent   &#13;
+               #allowedClassesTable = test&#13;
+               &#13;
+        entryHTMLparser_db = 1&#13;
+        entryHTMLparser_db{&#13;
+                  allowTags &lt; RTE.default.proc.allowTags&#13;
+                  allowedClasses &lt; RTE.default.proc.allowedClasses&#13;
+                  &#13;
+                  denyTags &gt;&#13;
+                  htmlSpecialChars = 0&#13;
+                  removeTags =  o:p, sdfield, strike, u&#13;
+                  removeTags := removeFromList(font)&#13;
+                  keepNonMatchedTags = protect&#13;
+&#13;
+               &#13;
+               tags{&#13;
+                  img.allowedAttrib = 0&#13;
+                  img.rmTagIfNoAttrib = 1&#13;
+		span.fixAttrib.style.unset &gt;&#13;
+		font.fixAttrib.style.unset &gt; &#13;
+		 #p.fixAttrib.align.unset = xml:lang&#13;
+		p.fixAttrib.align.unset &gt;&#13;
+		p.allowed.Attribs = class, align, style&#13;
+                  div.fixAttrib.align.unset = 1&#13;
+		hr.allowedAttribs = class&#13;
+		b.allowedAttribs = xml:lang&#13;
+		blockquote.allowedAttribs = xml:lang&#13;
+		cite.allowedAttribs = xml:lang&#13;
+		em.allowedAttribs = xml:lang&#13;
+		i.allowedAttribs = xml:lang&#13;
+		q.allowedAttribs = xml:lang&#13;
+		strong.allowedAttribs = xml:lang&#13;
+		sub.allowedAttribs = xml:lang&#13;
+		sup.allowedAttribs = xml:lang&#13;
+		tt.allowedAttribs = xml:lang&#13;
+                  &#13;
+		  }&#13;
+                              &#13;
+        &#13;
+    }&#13;
+    &#13;
+    HTMLparser_db{&#13;
+                  tags.font.allowedAttribs = color, style, background-color&#13;
+                  tags.p.allowed.Attribs = class,style&#13;
+                        &#13;
+                  noAttrib = br&#13;
+                  xhtml_cleaning = 1&#13;
+                  }&#13;
+                  &#13;
+   exitHTMLparser_db = 1&#13;
+   exitHTMLparser_db{&#13;
+                  allowTags &lt; RTE.default.proc.allowTags&#13;
+                  tags.b.remap = strong&#13;
+                  tags.i.remap = em&#13;
+                  keepNonMatchedTags = 1&#13;
+                  htmlSpecialChars = 0&#13;
+                  }&#13;
+                  &#13;
+}&#13;
+&#13;
+RTE.default.FE.&lt; RTE.default&#13;
+RTE.default.FE.proc &lt; RTE.default.proc&#13;
+&#13;
+RTE.config.tt_content.bodytext &gt;&#13;
+RTE.config.tt_content.bodytext.proc.overruleMode = ts_css&#13;
+RTE.config.tt_content.bodytext.proc.types.text.proc.overruleMode = ts_css&#13;
+RTE.config.tt_content.bodytext.proc.types.textpic.overruleMode = ts_css&#13;
+&#13;
+    &#13;
+    &#13;
+    &#13;
+TCEFORM.tt_content.bodytext.RTEfullScreenWidth = 100%&#13;
+setup.default.edit_RTE = 1&#13;
+setup.override.navFrameResizable = 1&#13;
+&#13;
+RTE.classes{&#13;
+&#13;
+h3 {&#13;
+     name = rotrot&#13;
+     font-size: 2em;&#13;
+     color: #CC0000;&#13;
+     }&#13;
+   }  &#13;
+&#13;
+&#13;
+&#13;
+                             &#13;
+RTE.colors{&#13;
+&#13;
+kommentar1{&#13;
+           name = die neuen Webfarben &#13;
+           } &#13;
+&#13;
+color1{&#13;
+       name = rot&#13;
+       value = #CC0000&#13;
+       }     &#13;
+               &#13;
+             &#13;
+ color2{&#13;
+       name = dunkelgrau&#13;
+       value = #505050&#13;
+       }     &#13;
+             &#13;
+color3{&#13;
+       name = grau&#13;
+       value = #ABABAB&#13;
+       }&#13;
+&#13;
+color4{&#13;
+       name = hellgrau&#13;
+       value = #DCDCDC&#13;
+       }&#13;
+&#13;
+color19{&#13;
+       name = blau&#13;
+       value = #003399&#13;
+       }&#13;
+&#13;
+&#13;
+&#13;
+&#13;
+kommentar2{&#13;
+          name = die neuen Corporat-Design Farben&#13;
+}&#13;
+&#13;
+color5{&#13;
+       name = dunkelgrau&#13;
+       value = #786E64&#13;
+      }&#13;
+ &#13;
+color6{&#13;
+       name = rot&#13;
+       value = #F03C14&#13;
+       }&#13;
+&#13;
+color7{&#13;
+       name = gelborange&#13;
+       value = #FABE14&#13;
+       }&#13;
+ &#13;
+color8{&#13;
+       name = gelbgruen&#13;
+       value = #D7D700&#13;
+       }&#13;
+&#13;
+color9{&#13;
+       name = blaugruen&#13;
+       value = #50C8AA&#13;
+      } &#13;
+&#13;
+color10{&#13;
+       name = hellblau&#13;
+       value = #0ABEC8&#13;
+      }&#13;
+      &#13;
+color11{&#13;
+       name = blauviolett&#13;
+       value = #9696D7&#13;
+      } &#13;
+      &#13;
+color12{&#13;
+       name = grau2&#13;
+       value = #A79F91&#13;
+      } &#13;
+&#13;
+color13{&#13;
+       name = grau3&#13;
+       value = #BCB6AA&#13;
+      } &#13;
+&#13;
+color14{&#13;
+       name = grau4&#13;
+       value = #D2CDC6&#13;
+      } &#13;
+&#13;
+color15{&#13;
+       name = grau5&#13;
+       value = #E7E4E0&#13;
+      } &#13;
+&#13;
+color18{&#13;
+       name = grau6&#13;
+       value = #FAF9F8&#13;
+      } &#13;
+&#13;
+&#13;
+color16{&#13;
+       name = weiss&#13;
+       value = #FFFFFF&#13;
+       } &#13;
+&#13;
+&#13;
+color17{&#13;
+       name = schwarz&#13;
+       value = #000000&#13;
+       }&#13;
+}&#13;
+&#13;
+RTE.fontSizes {&#13;
+&#13;
+size1 {&#13;
+       name = Large&#13;
+       value = 1em&#13;
+      }&#13;
+&#13;
+&#13;
+size2 {&#13;
+     name = Small&#13;
+     value = 0.6em&#13;
+     }&#13;
+&#13;
+}&#13;
+      &#13;
+                                                   &#13;
+TCEFORM.tt_content.header_layout.altLabels.1 = schwarz, mittel&#13;
+TCEFORM.tt_content.header_layout.altLabels.2 = schwarz, klein&#13;
+TCEFORM.tt_content.header_layout.altLabels.3 = rot, mittel&#13;
+TCEFORM.tt_content.header_layout.altLabels.4 = grau, klein&#13;
+TCEFORM.tt_content.header_layout.altLabels.5 = hellgrau, groß&#13;
+TCEFORM.tt_content.header_layout.altLabels.6 = versteckt&#13;
+&#13;
+&#13;
+</value>
+        </field>
+        <field name="storage_pid" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="is_siteroot" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="url" type="text" format="line">
+          <meta/>
+          <value/>
+        </field>
+        <field name="hidden" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="starttime" type="date" format="date">
+          <meta/>
+          <value>1970-01-01</value>
+        </field>
+        <field name="endtime" type="date" format="date">
+          <meta/>
+          <value>1970-01-01</value>
+        </field>
+        <field name="urltype" type="int" format="text">
+          <meta/>
+          <value>1</value>
+        </field>
+        <field name="shortcut" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="shortcut_mode" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="no_cache" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="fe_group" type="text" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="subtitle" type="text" format="line">
+          <meta/>
+          <value/>
+        </field>
+        <field name="layout" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="target" type="text" format="line">
+          <meta/>
+          <value/>
+        </field>
+        <field name="media" type="text" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="lastUpdated" type="datetime" format="datetime">
+          <meta/>
+          <value>1970-01-01T01:00:00+01:00</value>
+        </field>
+        <field name="keywords" type="text" format="multline">
+          <meta/>
+          <value/>
+        </field>
+        <field name="cache_timeout" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="newUntil" type="date" format="date">
+          <meta/>
+          <value>1970-01-01</value>
+        </field>
+        <field name="description" type="text" format="multline">
+          <meta/>
+          <value/>
+        </field>
+        <field name="no_search" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="SYS_LASTCHANGED" type="int" format="text">
+          <meta/>
+          <value>1284991913</value>
+        </field>
+        <field name="abstract" type="text" format="multline">
+          <meta/>
+          <value/>
+        </field>
+        <field name="module" type="text" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="extendToSubpages" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="author" type="text" format="line">
+          <meta/>
+          <value/>
+        </field>
+        <field name="author_email" type="text" format="line">
+          <meta/>
+          <value/>
+        </field>
+        <field name="nav_title" type="text" format="line">
+          <meta/>
+          <value/>
+        </field>
+        <field name="nav_hide" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="content_from_pid" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="mount_pid" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="mount_pid_ol" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="alias" type="text" format="line">
+          <meta/>
+          <value/>
+        </field>
+        <field name="l18n_cfg" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="fe_login_mode" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="tx_t3pn_cmp_crossmedia" type="text" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="tx_templavoila_next_ds" type="text" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="tx_templavoila_next_to" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="tx_next_fe_groups_accumulated" type="text" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="url_scheme" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="backend_layout" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="backend_layout_next_level" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+        <field name="tx_phpunit_is_dummy_record" type="int" format="text">
+          <meta/>
+          <value/>
+        </field>
+      </record>
+      <node type="group" subtype="records">
+        <record type="tt_content" subtype="text" language="en">
+          <field name="uid" type="int" format="text">
+            <meta/>
+            <value>77</value>
+          </field>
+          <field name="pid" type="int" format="text">
+            <meta/>
+            <value>42</value>
+          </field>
+          <field name="tstamp" type="datetime" format="datetime">
+            <meta/>
+            <value>2010-09-08T13:37:40+02:00</value>
+          </field>
+          <field name="hidden" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="sorting" type="int" format="text">
+            <meta/>
+            <value>200</value>
+          </field>
+          <field name="CType" type="text" format="text">
+            <meta/>
+            <value>text</value>
+          </field>
+          <field name="header" type="text" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="header_position" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="bodytext" type="text" format="rich">
+            <meta/>
+            <value xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml">
+<rich:p>Sed scelerisque sagittis lorem &amp; phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo.</rich:p>
+<rich:p>aäb cde fgh ijk lmn oöp qrsß tuü vwx yz AÄBC DEF GHI JKL MNO ÖPQ RST UÜV WXYZ ! "§ $%&amp; /() =? * '&lt;&gt; |; ²³~ @`´ ©«» ¼× {}aäb cde fgh ijk lmn oöp qrsß tuü vwx yz AÄBC DEF GHI JKL MNO ÖPQ RST UÜV WXYZ ! "§</rich:p>
+<rich:p>Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</rich:p>
+<rich:h1><rich:span class="dquo">“</rich:span>Level 1 heading”</rich:h1>
+<rich:p>Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet. »Wie ein Hund! « sagte er, es war, als sollte die Scham ihn überleben.</rich:p>
+<rich:h2>Level 02 Heading</rich:h2>
+<rich:p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</rich:p>
+<rich:h3>Level 03 Heading</rich:h3>
+<rich:p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</rich:p>
+<rich:h4>Level 04 Heading</rich:h4>
+<rich:p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</rich:p>
+<rich:h5>Level 05 Heading</rich:h5>
+<rich:p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</rich:p>
+<rich:h6>Level 06 Heading</rich:h6>
+<rich:p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</rich:p>
+<rich:blockquote>
+<rich:p>Paragraph inside Blockquote: Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Sed scelerisque sagittis lorem.</rich:p>
+<rich:p>Paragraph inside Blockquote: Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Sed scelerisque sagittis lorem.</rich:p>
+</rich:blockquote>
+<rich:address>Address: Example address 224, Sweden</rich:address>
+<rich:pre>
+<rich:strong>Preformated:</rich:strong>Testing one row<rich:br/>     and another 
+</rich:pre>
+<rich:p>I am <rich:a href="?abc123">the a tag</rich:a> example</rich:p>
+<rich:p>I am &lt;abbr title="test"&gt;the abbr tag&lt;/abbr&gt; example</rich:p>
+<rich:p>I am &lt;acronym&gt;the acronym tag&lt;/acronym&gt; example</rich:p>
+<rich:p>I am <rich:strong>the b tag</rich:strong> example</rich:p>
+<rich:p>I am &lt;big&gt;the big tag&lt;/big&gt; example</rich:p>
+<rich:p>I am <rich:cite>the cite tag</rich:cite> example</rich:p>
+<rich:p>I am <rich:code>the code tag</rich:code> example</rich:p>
+<rich:p>I am <rich:del>the del tag</rich:del> example</rich:p>
+<rich:p>I am <rich:dfn>the dfn tag</rich:dfn> example</rich:p>
+<rich:p>I am <rich:em>the em tag</rich:em> example</rich:p>
+<rich:p>I am the font tag example</rich:p>
+<rich:p>I am <rich:em>the i tag</rich:em> example</rich:p>
+<rich:p>I am <rich:ins>the ins tag</rich:ins> example</rich:p>
+<rich:p>I am &lt;kbd&gt;the kbd tag&lt;/kbd&gt; example</rich:p>
+<rich:p>I am &lt;q&gt;the q tag &lt;q&gt;inside&lt;/q&gt; a q tag&lt;/q&gt; example</rich:p>
+<rich:p>I am &lt;s&gt;the s tag&lt;/s&gt; example</rich:p>
+<rich:p>I am &lt;samp&gt;the samp tag&lt;/samp&gt; example</rich:p>
+<rich:p>I am &lt;small&gt;the small tag&lt;/small&gt; example</rich:p>
+<rich:p>I am the span tag example</rich:p>
+<rich:p>I am the strike tag example</rich:p>
+<rich:p>I am <rich:strong>the strong tag</rich:strong> example</rich:p>
+<rich:p>I am <rich:sub>the sub tag</rich:sub> example</rich:p>
+<rich:p>I am <rich:sup>the sup tag</rich:sup> example</rich:p>
+<rich:p>I am <rich:tt>the tt tag</rich:tt> example</rich:p>
+<rich:p>I am <rich:var>the var tag</rich:var> example</rich:p>
+<rich:p>I am the u tag example</rich:p>
+<rich:hr/>
+<rich:ul>
+<rich:li>Unordered list 01</rich:li>
+<rich:li>Unordered list 02</rich:li>
+<rich:li>Unordered list 03
+<rich:ul>
+<rich:li>Unordered list inside list level 2</rich:li>
+<rich:li>Unordered list inside list level 2
+<rich:ul>
+<rich:li>Unordered list inside list level 3</rich:li>
+<rich:li>Unordered list inside list level 3</rich:li>
+</rich:ul>
+</rich:li>
+</rich:ul>
+</rich:li>
+</rich:ul>
+<rich:ol>
+<rich:li>Ordered list 01</rich:li>
+<rich:li>Ordered list 02</rich:li>
+<rich:li>Ordered list 03
+<rich:ol>
+<rich:li>Ordered list inside list level 2</rich:li>
+<rich:li>Ordered list inside list level 2
+<rich:ol>
+<rich:li>Ordered list inside list level 3</rich:li>
+<rich:li>Ordered list inside list level 3</rich:li>
+</rich:ol>
+</rich:li>
+</rich:ol>
+</rich:li>
+</rich:ol>
+<rich:dl>
+<rich:dt>Description list title 01</rich:dt>
+<rich:dd>Description list description 01</rich:dd>
+<rich:dt>Description list title 02</rich:dt>
+<rich:dd>Description list description 02</rich:dd>
+<rich:dd>Description list description 03</rich:dd>
+</rich:dl>
+<rich:table class="contenttable">
+<rich:caption>Table Caption</rich:caption>
+<rich:thead>
+<rich:tr>
+<rich:th>
+<rich:p>Table head th</rich:p>
+</rich:th>
+<rich:td>
+<rich:p>Table head td</rich:p>
+</rich:td>
+</rich:tr>
+</rich:thead>
+<rich:tfoot>
+<rich:tr>
+<rich:th>
+<rich:p>Table foot th</rich:p>
+</rich:th>
+<rich:td>
+<rich:p>Table foot td</rich:p>
+</rich:td>
+</rich:tr>
+</rich:tfoot>
+<rich:tbody>
+<rich:tr>
+<rich:th>
+<rich:p>Table body th</rich:p>
+</rich:th>
+<rich:td>
+<rich:p>Table body td</rich:p>
+</rich:td>
+</rich:tr>
+<rich:tr>
+<rich:td>
+<rich:p>Table body td</rich:p>
+</rich:td>
+<rich:td>
+<rich:p>Table body td</rich:p>
+</rich:td>
+</rich:tr>
+</rich:tbody>
+</rich:table>
+<rich:p>Sed scelerisque sagittis lorem. Phasellus sodales. Nulla urna justo, vehicula in, suscipit nec, molestie sed, tellus. Quisque justo. Nam libero leo, elementum in, dapibus a, suscipit vitae, purus. Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis vel nibh. Etiam viverra augue non enim.</rich:p>
+</value>
+          </field>
+          <field name="image" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="imagewidth" type="int" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="imageorient" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="imagecaption" type="text" format="multline">
+            <meta/>
+            <value/>
+          </field>
+          <field name="imagecols" type="int" format="text">
+            <meta/>
+            <value>1</value>
+          </field>
+          <field name="imageborder" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="media" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="layout" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="deleted" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="cols" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="records" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="pages" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="starttime" type="date" format="date">
+            <meta/>
+            <value>1970-01-01</value>
+          </field>
+          <field name="endtime" type="date" format="date">
+            <meta/>
+            <value>1970-01-01</value>
+          </field>
+          <field name="colPos" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="subheader" type="text" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="spaceBefore" type="int" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="spaceAfter" type="int" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="fe_group" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="header_link" type="text" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="imagecaption_position" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="image_link" type="text" format="multline">
+            <meta/>
+            <value/>
+          </field>
+          <field name="image_zoom" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="image_noRows" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="image_effects" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="image_compression" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="altText" type="text" format="multline">
+            <meta/>
+            <value/>
+          </field>
+          <field name="titleText" type="text" format="multline">
+            <meta/>
+            <value/>
+          </field>
+          <field name="longdescURL" type="text" format="multline">
+            <meta/>
+            <value/>
+          </field>
+          <field name="header_layout" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="text_align" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="text_face" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="text_size" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="text_color" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="text_properties" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="menu_type" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="list_type" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="table_border" type="int" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="table_cellspacing" type="int" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="table_cellpadding" type="int" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="table_bgColor" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="select_key" type="text" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="sectionIndex" type="int" format="text">
+            <meta/>
+            <value>1</value>
+          </field>
+          <field name="linkToTop" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="filelink_size" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="section_frame" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="date" type="date" format="date">
+            <meta/>
+            <value>1970-01-01</value>
+          </field>
+          <field name="splash_layout" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="multimedia" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="image_frames" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="recursive" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="imageheight" type="int" format="line">
+            <meta/>
+            <value/>
+          </field>
+          <field name="rte_enabled" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="sys_language_uid" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="pi_flexform" type="text" format="xml">
+            <meta/>
+            <value/>
+          </field>
+          <field name="l18n_parent" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="tx_t3pn_cmp_crossmedia" type="text" format="text">
+            <meta/>
+            <value>&lt;?xml version="1.0" encoding="utf-8" standalone="yes" ?&gt;
+&lt;T3FlexForms&gt;
+    &lt;data&gt;
+        &lt;sheet index="sDEF"&gt;
+            &lt;language index="lDEF"&gt;
+                &lt;field index="specialheader"&gt;
+                    &lt;value index="vDEF"&gt;&lt;/value&gt;
+                &lt;/field&gt;
+                &lt;field index="pagebreak"&gt;
+                    &lt;value index="vDEF"&gt;0&lt;/value&gt;
+                &lt;/field&gt;
+            &lt;/language&gt;
+        &lt;/sheet&gt;
+    &lt;/data&gt;
+&lt;/T3FlexForms&gt;</value>
+          </field>
+          <field name="crdate" type="datetime" format="datetime">
+            <meta/>
+            <value>2010-09-06T11:45:57+02:00</value>
+          </field>
+          <field name="cruser_id" type="int" format="text">
+            <meta/>
+            <value>1</value>
+          </field>
+          <field name="ce_flexform" type="text" format="text">
+            <meta/>
+            <value/>
+          </field>
+          <field name="tx_phpunit_is_dummy_record" type="int" format="text">
+            <meta/>
+            <value/>
+          </field>
+        </record>
+      </node>
+    </node>
+  </content>
+</cmp3document>

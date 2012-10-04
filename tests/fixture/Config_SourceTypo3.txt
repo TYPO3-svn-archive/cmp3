@@ -1,0 +1,128 @@
+
+
+source {
+
+	testNews = \Cmp3\Source\Typo3Xml
+	testNews.title = test typo3
+	testNews.fetcher = \Cmp3\Source\Typo3Query
+	testNews.fetcher {
+#TODO
+		language = 0
+		languageOverlayMode = hideNonTranslated
+		contentFallback =
+		enableFields = FE
+
+		selection {
+			10 = news
+		}
+
+		queries {
+			news.table = tt_news
+			news.enableFields = default
+			news.constraints {
+					pid = 5
+			}
+		}
+	}
+
+
+	testNewsProcessed = \Cmp3\Source\Typo3Xml
+	testNewsProcessed.title = test typo3 with processing
+	testNewsProcessed.fetcher = \Cmp3\Source\Typo3Query
+	testNewsProcessed.fetcher {
+#TODO
+		language = 0
+		languageOverlayMode = hideNonTranslated
+		contentFallback =
+		enableFields = FE
+
+		selection {
+			10 = news
+		}
+
+		queries {
+			news.table = tt_news
+			news.enableFields = default
+			news.constraints {
+					pid = 5
+				}
+		}
+	}
+	testNewsProcessed.processing {
+		10 = \Cmp3\ContentProcessing\XPath_Typo3RteRender
+		10.xpath = //field[@format="typo3_rte"]
+	}
+
+
+	testContent = \Cmp3\Source\Typo3Xml
+	testContent.title = test file 2
+	testContent.processing {
+		10 = \Cmp3\ContentProcessing\XPath_Typo3RteRender
+		10.xpath = //field[@format="typo3_rte"]
+	}
+	// Typo3Query is default fetcher here
+	testContent.fetcher {
+#TODO
+		language = 0
+		languageOverlayMode = hideNonTranslated
+		contentFallback =
+		enableFields = FE
+
+
+		selection {
+			10 = pages_from_home
+#			20 = content_from_somewhere
+		}
+
+
+		queries {
+			pages_from_home.table = pages
+			pages_from_home.id = 42
+			// type can be "default" (deleted, versioning, ...), "disabled", "starttime", "endtime", "fe_group" (keys from "enablefields" in TCA).
+			pages_from_home.enableFields = default
+#TODO set fe_group values
+			pages_from_home.constraints {
+				doktype < 200
+			}
+			pages_from_home.subqueries = sub_pages,content
+
+			sub_pages.table = pages
+			sub_pages.id.exclude = 23,24
+			sub_pages.enableFields = default
+			sub_pages.order = sorting
+			sub_pages.constraints {
+					pid = PARENT.uid
+					doktype = < 200
+				}
+			sub_pages.subqueries = content
+
+
+			content.table = tt_content
+			content.id.exclude = 23,24
+			content.enableFields = default
+			content.constraints {
+					CType = 'text'
+					colpos = 0
+					pid = PARENT.uid
+				}
+			// will query records for plugin ctypes
+			content.diveDeeper = 1
+
+
+			news.table = tt_news
+			news.enableFields = default
+			news.constraints {
+					CType = text
+					colpos = 1
+					pid = PARENT.pid
+				}
+
+			content_from_somewhere.table = tt_content
+			content_from_somewhere.id = 34
+
+		}
+	}
+
+
+}
+

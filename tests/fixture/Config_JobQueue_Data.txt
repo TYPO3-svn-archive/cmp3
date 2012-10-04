@@ -1,0 +1,32 @@
+
+
+source {
+
+	xmlfile = \Cmp3\Source\Fetcher
+	xmlfile.title = person xml file
+	xmlfile.fetcher = \Cmp3\Fetcher\File
+	xmlfile.fetcher {
+		type = XML
+		url = EXT:cmp3/tests/fixture/person.xml
+	}
+
+}
+
+
+
+#----- JOB -----------------------------------------------------
+
+
+job.testXPathDataMerge.title = XML File from file source with extra processing
+job.testXPathDataMerge {
+	parts {
+		10.source = xmlfile
+		10.preProcessing {
+			10 = \Cmp3\ContentProcessing\XPath_DataMerge
+			10.xpathParent = //hChildren
+			10.xpathData = //hChildren/hChild
+			10.useData = extraData
+		}
+	}
+}
+

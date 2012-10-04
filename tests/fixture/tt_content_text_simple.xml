@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tt_content [ <!ELEMENT tt_content ANY> ]>
+    <tt_content>
+        <uid>8</uid>
+        <pid>5</pid>
+        <t3ver_oid>0</t3ver_oid>
+        <t3ver_id>0</t3ver_id>
+        <t3ver_wsid>0</t3ver_wsid>
+        <t3ver_label></t3ver_label>
+        <t3ver_state>0</t3ver_state>
+        <t3ver_stage>0</t3ver_stage>
+        <t3ver_count>0</t3ver_count>
+        <t3ver_tstamp>0</t3ver_tstamp>
+        <t3_origuid>0</t3_origuid>
+        <tstamp>1269877564</tstamp>
+        <hidden>0</hidden>
+        <sorting>128</sorting>
+        <CType>text</CType>
+        <header>Aliquam ultrices</header>
+        <header_position></header_position>
+        <bodytext>Aliquam ultrices. Fusce nulla. Mauris fringilla dapibus nisl. Nullam at nulla sed pede viverra imperdiet. Morbi aliquam nunc nec lorem. Pellentesque elementum, nibh nec varius aliquet, justo justo porta leo, vel fermentum enim wisi sed magna. In hac habitasse platea dictumst. Nam bibendum augue quis orci. &lt;link http://exotec.de _top&gt;Praesent rutrum&lt;/link&gt;, arcu id gravida pellentesque, urna nunc tristique nulla, lobortis pharetra nulla leo eget urna. Nullam vitae est vel sem sollicitudin euismod. Nulla facilisi. Maecenas vel mauris et dui pharetra eleifend. Suspendisse a augue at felis blandit viverra. Pellentesque ultricies, eros iaculis pharetra luctus, libero nulla tempus elit, varius laoreet augue nunc ut nulla.</bodytext>
+        <technical_details>Stickbreite [mm]|15-40||&#13;
+Sticklänge [mm]|45-160||&#13;
+Ausbringungsmenge Sticks [Sticks/Min.]|bis zu 1.000 ||&#13;
+Sticks pro Karton|5-50||&#13;
+Ausbringungsmenge Kartons [Kartons/Min.]|bis zu 100||&#13;
+|||
+        </technical_details>
+        <url>http://www.google.de</url>
+        <image></image>
+        <imagewidth>0</imagewidth>
+        <imageorient>8</imageorient>
+        <imagecaption></imagecaption>
+        <imagecols>0</imagecols>
+        <imageborder>0</imageborder>
+        <media></media>
+        <layout>0</layout>
+        <deleted>0</deleted>
+        <cols>0</cols>
+        <records></records>
+        <pages></pages>
+        <starttime>0</starttime>
+        <endtime>0</endtime>
+        <colPos>0</colPos>
+        <subheader></subheader>
+        <spaceBefore>0</spaceBefore>
+        <spaceAfter>0</spaceAfter>
+        <fe_group></fe_group>
+        <header_link></header_link>
+        <imagecaption_position></imagecaption_position>
+        <image_link></image_link>
+        <image_zoom>0</image_zoom>
+        <image_noRows>0</image_noRows>
+        <image_effects>0</image_effects>
+        <image_compression>0</image_compression>
+        <altText></altText>
+        <titleText></titleText>
+        <longdescURL></longdescURL>
+        <header_layout>0</header_layout>
+        <text_align></text_align>
+        <text_face>0</text_face>
+        <text_size>0</text_size>
+        <text_color>0</text_color>
+        <text_properties>0</text_properties>
+        <menu_type>0</menu_type>
+        <list_type></list_type>
+        <table_border>0</table_border>
+        <table_cellspacing>0</table_cellspacing>
+        <table_cellpadding>0</table_cellpadding>
+        <table_bgColor>0</table_bgColor>
+        <select_key></select_key>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>0</linkToTop>
+        <filelink_size>0</filelink_size>
+        <section_frame>0</section_frame>
+        <date>0</date>
+        <splash_layout>0</splash_layout>
+        <multimedia></multimedia>
+        <image_frames>0</image_frames>
+        <recursive>0</recursive>
+        <imageheight>0</imageheight>
+        <rte_enabled>0</rte_enabled>
+        <sys_language_uid>0</sys_language_uid>
+        <tx_impexp_origuid>1065</tx_impexp_origuid>
+        <pi_flexform></pi_flexform>
+        <l18n_parent>0</l18n_parent>
+        <l18n_diffsource>a:19:{s:5:&quot;CType&quot;;N;s:16:&quot;sys_language_uid&quot;;N;s:6:&quot;colPos&quot;;N;s:11:&quot;spaceBefore&quot;;N;s:10:&quot;spaceAfter&quot;;N;s:13:&quot;section_frame&quot;;N;s:12:&quot;sectionIndex&quot;;N;s:6:&quot;hidden&quot;;N;s:6:&quot;header&quot;;N;s:15:&quot;header_position&quot;;N;s:13:&quot;header_layout&quot;;N;s:11:&quot;header_link&quot;;N;s:4:&quot;date&quot;;N;s:9:&quot;linkToTop&quot;;N;s:8:&quot;bodytext&quot;;N;s:11:&quot;rte_enabled&quot;;N;s:9:&quot;starttime&quot;;N;s:7:&quot;endtime&quot;;N;s:8:&quot;fe_group&quot;;N;}</l18n_diffsource>
+        <t3ver_move_id>0</t3ver_move_id>
+        <crdate>0</crdate>
+        <cruser_id>0</cruser_id>
+        <ce_flexform></ce_flexform>
+        <tx_oelib_is_dummy_record>0</tx_oelib_is_dummy_record>
+        <tx_nawmaildl_download></tx_nawmaildl_download>
+    </tt_content>

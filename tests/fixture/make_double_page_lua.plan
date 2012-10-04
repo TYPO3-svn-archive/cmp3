@@ -1,0 +1,25 @@
+
+
+PageHeight = SourceHeight
+PageWidth = SourceWidth * 2
+
+print("SourceWidth",SourceWidth)
+print("PageWidth",PageWidth)
+
+print("PageCount",PageCount)
+
+-- PushRecord(source page, target page, rotation, x, y)
+
+
+source = 1
+dest = 1
+
+while source <= PageCount
+	do
+		print("source page (and next)",source)
+		print("target page",dest)
+		PushRecord(source,   dest, 0, 0,       0 )
+		PushRecord(source+1, dest, 0, SourceWidth, 0 )
+		dest = dest + 1
+		source = source + 2
+	end

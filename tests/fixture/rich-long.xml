@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<richtext xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml">
+
+    <rich:h1>baseline</rich:h1>
+
+    <rich:h2>a designer framework by ProjetUrbain.com</rich:h2>
+
+    <rich:h1>Typography</rich:h1>
+
+    <rich:p>This page show basic HTML elements and how Baseline renders them. You don't need to change the way you code or learn CLASS or ID names, everything will work by including the baseline.type.css.</rich:p>
+
+    <rich:h1>Title — h1</rich:h1>
+
+    <rich:p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</rich:p>
+
+    <rich:h2>Subtitle — h2</rich:h2>
+
+    <rich:p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</rich:p>
+
+    <rich:p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:h3>Subtitle — h3</rich:h3>
+
+    <rich:p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</rich:p>
+
+    <rich:h4>Subtitle — h4</rich:h4>
+
+    <rich:p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</rich:p>
+
+    <rich:p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:h5>Subtitle — h5</rich:h5>
+
+    <rich:p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</rich:p>
+
+    <rich:h6>Subtitle — h6</rich:h6>
+
+    <rich:p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</rich:p>
+
+    <rich:p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:ul>
+      <rich:li>List item 01</rich:li>
+
+      <rich:li>List item 02</rich:li>
+
+      <rich:li>List item 03</rich:li>
+    </rich:ul>
+
+    <rich:p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</rich:p>
+
+    <rich:blockquote cite="./Baseline%20-%20Typography_files/saved_resource">
+      <rich:p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+    </rich:blockquote>
+
+    <rich:p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</rich:p>
+
+    <rich:p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+    <rich:hr />
+
+    <rich:p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</rich:p>
+
+    <rich:p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</rich:p>
+
+    <rich:h2>List Types</rich:h2>
+
+    <rich:h3>Ordered list</rich:h3>
+
+    <rich:ol>
+      <rich:li>List item</rich:li>
+
+      <rich:li>List item</rich:li>
+
+      <rich:li>List item
+
+        <rich:ol>
+          <rich:li>List item level 2</rich:li>
+
+          <rich:li>List item level 2
+
+            <rich:ol>
+              <rich:li>List item level 3</rich:li>
+
+              <rich:li>List item level 3</rich:li>
+            </rich:ol>
+          </rich:li>
+        </rich:ol>
+      </rich:li>
+    </rich:ol>
+
+    <rich:h3>Unordered list</rich:h3>
+
+    <rich:ul>
+      <rich:li>List item 01</rich:li>
+
+      <rich:li>List item 02</rich:li>
+
+      <rich:li>List item 03
+
+        <rich:ul>
+          <rich:li>List item level 2</rich:li>
+
+          <rich:li>List item level 2
+
+            <rich:ul>
+              <rich:li>List item level 3</rich:li>
+
+              <rich:li>List item level 3</rich:li>
+            </rich:ul>
+          </rich:li>
+        </rich:ul>
+      </rich:li>
+    </rich:ul>
+
+    <rich:h3>Definition List</rich:h3>
+
+    <rich:dl>
+      <rich:dt>Definition list title</rich:dt>
+
+      <rich:dd>Definition list data</rich:dd>
+
+      <rich:dt>Definition list title</rich:dt>
+
+      <rich:dd>Definition list data</rich:dd>
+
+      <rich:dt>Definition list title</rich:dt>
+
+      <rich:dd>Definition list data</rich:dd>
+    </rich:dl>
+
+    <rich:h3>Dialog</rich:h3>
+
+    <rich:dl class="dialog">
+      <rich:dt>Costello</rich:dt>
+
+      <rich:dd>Look, you gotta first baseman?</rich:dd>
+
+      <rich:dt>Abbott</rich:dt>
+
+      <rich:dd>Certainly.</rich:dd>
+
+      <rich:dt>Costello</rich:dt>
+
+      <rich:dd>Who's playing first?</rich:dd>
+
+      <rich:dt>Abbott</rich:dt>
+
+      <rich:dd>That's right.</rich:dd>
+
+      <rich:dt>Costello</rich:dt>
+
+      <rich:dd>When you pay off the first baseman every month, who gets the money?</rich:dd>
+
+      <rich:dt>Abbott</rich:dt>
+
+      <rich:dd>Every dollar of it.</rich:dd>
+    </rich:dl>
+
+    <rich:h2>Blockquote</rich:h2>
+
+    <rich:blockquote cite="./Baseline%20-%20Typography_files/saved_resource">
+      <rich:p>Duis autem vel eum iriure dolor in hendrerit in <rich:q>vulputate velit esse molestie consequat</rich:q>, vel illum dolore eu feugiat nulla facilisis.</rich:p>
+    </rich:blockquote>
+
+    <rich:h2>Tables</rich:h2>
+
+    <rich:table>
+      <rich:caption>
+        table title
+      </rich:caption>
+
+      <rich:thead>
+        <rich:tr>
+          <rich:th>Table header 1</rich:th>
+
+          <rich:th>Table header 2</rich:th>
+        </rich:tr>
+      </rich:thead>
+
+      <rich:tbody>
+        <rich:tr>
+          <rich:td>Table row 1, data 1</rich:td>
+
+          <rich:td>Table row 1, data 2</rich:td>
+        </rich:tr>
+
+        <rich:tr>
+          <rich:td>Table row 2, data 1</rich:td>
+
+          <rich:td>Table row 2, data 2</rich:td>
+        </rich:tr>
+      </rich:tbody>
+
+      <rich:tfoot>
+        <rich:tr>
+          <rich:td>Table footer, data 1</rich:td>
+
+          <rich:td>Table footer, data 2</rich:td>
+        </rich:tr>
+      </rich:tfoot>
+    </rich:table>
+
+    <rich:h2>Other markup code</rich:h2>
+
+    <rich:p><rich:a href="">hyperlink</rich:a><rich:br/>
+    <rich:abbr title="title">abbreviation</rich:abbr><rich:br/>
+    <rich:b>offset text typically styled in bold</rich:b><rich:br/>
+    <rich:cite>cited title of a work</rich:cite><rich:br/>
+    <rich:code>code fragment</rich:code><rich:br/>
+    <rich:del>deleted text</rich:del><rich:br/>
+    <rich:dfn title="title">defining instance</rich:dfn><rich:br/>
+    <rich:em>emphatic stress</rich:em><rich:br/>
+    <rich:i>offset text typically styled in italic</rich:i><rich:br/>
+    <rich:ins>inserted text</rich:ins><rich:br/>
+    <rich:kbd>user input</rich:kbd><rich:br/>
+    <rich:samp>sample output</rich:samp><rich:br/>
+    <rich:small>small print</rich:small><rich:br/>
+    <rich:strong>strong importance</rich:strong><rich:br/>
+    <rich:sup>superscript</rich:sup> <rich:sub>subscript</rich:sub><rich:br/>
+    <rich:var>variable or placeholder text</rich:var></rich:p>
+
+    <rich:address>
+      contact information
+    </rich:address>
+    <rich:pre>
+preformatted text
+</rich:pre>
+
+    <rich:p>soft hyphen : <rich:code>&#173;</rich:code></rich:p>
+
+    <rich:h2>White space</rich:h2>
+
+    <rich:ul class="white-space">
+		<rich:li><rich:span class="width1 description">en space : <rich:code>&amp;#8194;</rich:code></rich:span> <rich:span class="space-width">&#8194;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">em space : <rich:code>&amp;#8195;</rich:code></rich:span> <rich:span class="space-width">&#8195;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">3-per-em space : <rich:code>&amp;#8196;</rich:code></rich:span> <rich:span class="space-width">&#8196;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">4-per-em space : <rich:code>&amp;#8197;</rich:code></rich:span> <rich:span class="space-width">&#8197;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">6-per-em space : <rich:code>&amp;#8198;</rich:code></rich:span> <rich:span class="space-width">&#8198;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">figure space : <rich:code>&amp;#8199;</rich:code></rich:span> <rich:span class="space-width">&#8199;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">punctuation space : <rich:code>&amp;#8200;</rich:code></rich:span> <rich:span class="space-width">&#8200;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">thin space : <rich:code>&amp;#8201;</rich:code></rich:span> <rich:span class="space-width">&#8201;</rich:span></rich:li>
+		<rich:li><rich:span class="width1 description">hair space : <rich:code>&amp;#8202;</rich:code></rich:span> <rich:span class="space-width">&#8202;</rich:span></rich:li>
+    </rich:ul>
+
+	<rich:p><rich:small>© 2011 Stéphane Curzi, <rich:a href="http://www.projeturbain.com" target="_blank">ProjetUrbain.com</rich:a>.<rich:br />
+Content of this site is licensed under a <rich:a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Attribution-Share Alike 3.0 Unported License</rich:a>.</rich:small></rich:p>
+
+</richtext>

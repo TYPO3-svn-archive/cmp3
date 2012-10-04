@@ -1,0 +1,67 @@
+
+
+converter.test1 {
+
+	converter = \Cmp3\Converter\Webkit
+	#converter = \Cmp3\Converter\Mpdf
+
+	engine.wkhtmltopdf {
+
+		// binaryPath = EXT:naw_pdf_wkhtmltopdf/bin/wkhtmltopdf-amd64
+		binaryPath = EXT:naw_pdf_wkhtmltopdf/bin/wkhtmltopdf-i386
+		binaryPath = /usr/bin/wkhtmltopdf
+
+		// todo specific options/parameter for this engine
+
+		// wkhtmltopdf will render white background even if that is set and body is set to transparent
+		parameter = --no-background
+	}
+
+	engine.mpdf {
+		// todo specific options/parameter for this engine
+		footer = ||{PAGENO}
+	}
+
+	engine.prince {
+		binaryPath = /usr/bin/prince
+	}
+
+	engine.pdftk {
+		binaryPath =
+	}
+
+	page {
+		// Set paper size to: A4, Letter, etc.
+		size = A4
+
+		// portrait, landscape
+		orientation = portrait
+
+		// Page width and height (default unit millimeter)
+		width =
+		height =
+
+		// margins in mm
+		marginTop = 30
+		marginBottom = 30
+		marginLeft = 15
+		marginRight = 15
+	}
+
+	options {
+		// The title of the generated pdf file (The title of the first document is used if not specified)
+		title =
+
+		// dpi for images - seems not to work
+		dpi = 240
+
+	    renderLinks = 1
+	    renderForms = 1
+	    mediaType = screen
+#TODO what's this?
+	    autoFit = 1
+
+		overlay = fileadmin/approved.pdf
+		background = fileadmin/background.pdf
+	}
+}

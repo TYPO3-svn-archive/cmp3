@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?><!DOCTYPE T3locallang SYSTEM "http://www.bitmotion.de/dtds/t3locallang.dtd">
+<T3locallang>
+    <meta type="array">
+        <description></description>
+        <type>module</type>
+        <labelContext type="array">
+            <label index="mlang_tabs_tab"></label>
+            <label index="mlang_labels_tablabel"></label>
+            <label index="mlang_labels_tabdescr"></label>
+        </labelContext>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="mlang_tabs_tab">CMP3</label>
+            <label index="mlang_labels_tablabel">CMP3</label>
+            <label index="mlang_labels_tabdescr">Cross Media Publishing</label>
+        </languageKey>
+    </data>
+</T3locallang>

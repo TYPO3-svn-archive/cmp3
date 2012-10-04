@@ -1,0 +1,21 @@
+
+
+
+CLEAN
+
+- check catch(Exception) -> catch(\Exception), catch(\Cmp3\Exception)
+
+- cleanup row/meta
+
+- any file operation should not modify the original file during processing
+- or it is defined that files will be modified so you have to provide copies of your files
+
+- any element of job.parts (source, transformation, ...) should possible as renference or inline
+
+
+NEW
+
+- add task to remove old temp/log files
+
+- add caching
+- GetConfigHash() is present in some classes which might be used in conjunction with caching at some point

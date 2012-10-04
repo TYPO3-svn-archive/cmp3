@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<richtext xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml">
+
+	<rich:p>Sed scelerisque sagittis lorem &amp; phasellus sodales. Nulla
+	urna justo, vehicula in, suscipit nec, molestie sed, tellus.
+	Quisque justo.</rich:p>
+	<rich:p>aäb cde fgh ijk lmn oöp qrsß tuü vwx yz AÄBC DEF GHI JKL MNO ÖPQ
+	RST UÜV WXYZ ! "§ $%&amp; /() =? * '&lt;&gt; |; ²³~ @`´ ©«» ¼×
+	{}aäb cde fgh ijk lmn oöp qrsß tuü vwx yz AÄBC DEF GHI JKL MNO ÖPQ
+	RST UÜV WXYZ ! "§</rich:p>
+	<rich:p>Nam libero leo, elementum in, dapibus a, suscipit vitae, purus.
+	Duis arcu. Integer dignissim fermentum enim. Morbi convallis felis
+	vel nibh. Etiam viverra augue non enim.</rich:p>
+	<rich:h1>Level 1 heading”</rich:h1>
+	<rich:p>Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas
+	Böses getan hätte, wurde er eines Morgens verhaftet. »Wie ein Hund!
+	« sagte er, es war, als sollte die Scham ihn überleben.</rich:p>
+
+</richtext>

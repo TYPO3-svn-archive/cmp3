@@ -1,0 +1,251 @@
+
+options {
+
+    ##### META Options #####
+	item = CMP3GuiObjectSelect
+	item {
+	    Title = Produkt
+	    Description =
+	    properties {
+			Required = 1
+
+	    }
+	    // for cmp3
+	    meta {
+			type = text
+			format = line
+		}
+	}
+
+
+    ##### Field Options #####
+	freitext_produkt = CMP3GuiObjectText
+	freitext_produkt {
+	    Title = Freitext
+	    Description = Beschreibungstext für Produkt
+	    properties {
+			Required = 1
+	    }
+	    // for cmp3
+	    meta {
+			type = text
+			format = multiline
+		}
+	}
+
+
+
+//	$objFieldArray[] = new Field($objControl->Id /* freitext_produkt */,  $this->objConfig->GetValue('meta.type'),  $this->objConfig->GetValue('meta.format'), $this->objConfig->GetValue('meta.meta'), $objControl->GetValue());
+
+
+	freitext_kontakt = cmp3_gui_object_text
+	freitext_kontakt {
+	    Title = Freitext
+	    Description = Beschreibungstext für Produkt
+	    properties {
+	    }
+	    // for cmp3
+	    meta {
+			type = text
+			format = multiline
+		}
+	}
+
+	bilder_produkte = cmp3_gui_object_images
+	bilder_produkte {
+	    Title = Auswahl von Produt Bildern
+	    Description = Hier können Sie maximal 2 Produktbilder auswählen
+	    properties {
+			MaxSelectable = 2
+			SourceField = print_images
+			Required = 1
+	    }
+	    // for cmp3
+	    meta {
+			type = text
+			format = line
+		}
+	}
+
+	bild_upload = cmp3_gui_object_upload
+	bild_upload {
+	    Title = Bild hochladen
+	    Description = Großes Bild für die Mitte
+	    properties {
+			AllowedFileTypes = jpg,jpeg,png,tif
+			UploadFolder = uploads/cmp3_gui/
+	    }
+	    // for cmp3
+	    meta {
+			type = text
+			format = line
+		}
+	}
+
+	quality = cmp3_gui_object_radio
+	quality {
+	    type = configuration
+	    Title = Fertigstellung
+	    items {
+		print {
+		    Title = Druck
+		    Description = (Hohe Bildauflösung erforderlich)
+		    Value = 1
+		}
+		screen {
+		    Title = Bildschirm
+		    Description = (Niedrige Bildauflösung ausreichend)
+		    Value = 2
+		}
+	    }
+	    properties {
+
+	    }
+	    // for cmp3
+	    meta {
+			type = int
+			format = int
+		}
+	}
+
+	web_address = cmp3_gui_object_hidden
+	web_address {
+	    properties {
+			Value = www.dividella.de
+	    }
+	    // for cmp3
+	    meta {
+			type = text
+			format = line
+		}
+	}
+}
+
+
+layout {
+
+	1seite {
+	    Title = 1 Seite
+	    Description = Tolles PDF mit einer Seite
+	    Thumbnail = EXT:bla.jpg
+
+	    options {
+			10 = item
+			20 = ruler
+			30 = layouts
+			40 = freitext_produkt
+			45 = small_ruler
+			50 = freitext_kontakt
+			55 = small_ruler
+			60 = bilder_produkte
+			65 = small_ruler
+			70 = bild_upload
+			75 = ruler
+			80 = quality
+	    }
+	}
+}
+
+
+
+cmp3 {
+
+
+	source {
+
+		testContentProcessed = \Cmp3\Source\Typo3Xml
+		testContentProcessed.title = test typo3 with processing
+		testContentProcessed.fetcher = \Cmp3\Source\Typo3Query
+		testContentProcessed.fetcher {
+	#TODO
+			language = 0
+			languageOverlayMode = hideNonTranslated
+			contentFallback =
+			enableFields = FE
+
+			selection {
+				10 = content
+			}
+
+			queries {
+				content.table = tt_content
+				content.enableFields = default
+				// can be used too: content.id = {JobData:recordID}
+				content.constraints {
+					uid = {JobData:recordID}
+				}
+			}
+		}
+		testContentProcessed.processing {
+
+			10 = \Cmp3\ContentProcessing\XPath_DataMerge
+#FIXME It's not clear why this is different
+# tried to register namespace in XPath_DataMerge but that doesn't help
+# cmp3: is needed because that document is biult by php later might be loaded from string???
+			10.xpathParent = //cmp3:record
+			10.xpathData = //field
+			10.useData = extraData
+
+			20 = \Cmp3\ContentProcessing\XPath_Typo3RteRender
+			20.xpath = //field[@format="typo3_rte"]
+
+			30 = \Cmp3\ContentProcessing\XPath_QRCode
+			30 {
+				xpath = //field[@name="print_url"]/value
+				backgroundColor = #FFFFFF
+				foreColor = #000000
+				padding = 0
+				moduleSize = 4
+				ecclevel = M
+			}
+		}
+
+	}
+
+
+	#----- transformation -----------------------------------------------------
+
+	transformation.xml_to_pdf_with_fop = \Cmp3\Transformation\Fop
+	transformation.xml_to_pdf_with_fop {
+		stylesheet = EXT:cmp3/tests/fixture/Template_A4_1-seitig.xsl
+		// config file for fop
+		#engine.fop.config = EXT:kmp_cmp3/stylesheets/fop.xconf
+		// cli parameter
+		engine.fop.parameter =
+	}
+
+
+	transformation.xml_to_fo = \Cmp3\Transformation\Xslt1
+	transformation.xml_to_fo {
+		chain {
+			10.stylesheet = EXT:cmp3/tests/fixture/Template_A4_1-seitig.xsl
+		}
+	}
+
+	#----- JOB -----------------------------------------------------
+
+	job.testXML.title = XML File
+	job.testXML {
+		parts {
+			10.source = testContentProcessed
+		}
+	}
+
+	job.testFO.title = FO XML File
+	job.testFO {
+		parts {
+			10.source = testContentProcessed
+			10.transformation= xml_to_fo
+		}
+	}
+
+	job.testPDF.title = XML File to PDF using FOP
+	job.testPDF {
+		parts {
+			10.source = testContentProcessed
+			10.transformation= xml_to_pdf_with_fop
+		}
+	}
+
+}
+

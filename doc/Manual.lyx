@@ -1,0 +1,688 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman Myriad Pro
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 90
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 0
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 4
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "basicstyle={\small},stringstyle={\ttfamily},tabsize=4"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+CMP3 - Cross Media Publishing
+\end_layout
+
+\begin_layout Date
+9.5.2012 
+\end_layout
+
+\begin_layout Author
+Bitmotion
+\begin_inset Newline newline
+\end_inset
+
+René Fritz <r.fritz@bitmotion.de>
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+CMP3 is a system for data and content processing and transformation.
+ In other words: it can produce PDF files from your data.
+ But that's not the whole truth because producing PDF is just one example
+ of the possibilities.
+\end_layout
+
+\begin_layout Standard
+So what mean 
+\begin_inset Quotes eld
+\end_inset
+
+cross media publishing
+\begin_inset Quotes erd
+\end_inset
+
+? The idea is to use your content produced and stored at one location and
+ feed different channels to publish on several target platforms and media.
+ CMP3 with it's modular design can be configured to retrieve content from
+ any source, modify the data with processors using XSLT or PHP and finally
+ transform the content in any target format.
+\end_layout
+
+\begin_layout Standard
+The target format is not necessarily a print format like PDF, but could
+ also be XML, HTML, Text, and many other.
+ 
+\end_layout
+
+\begin_layout Standard
+For more information look at 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.cross-media.net
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Installation
+\end_layout
+
+\begin_layout Standard
+Install the extension as usual.
+ Please read the following sections for needed dependencies.
+\end_layout
+
+\begin_layout Subsection
+Dependencies
+\end_layout
+
+\begin_layout Subsubsection
+TYPO3
+\end_layout
+
+\begin_layout Standard
+While this is currently a TYPO3 extension, CMP3 itself is (or should be)
+ independent from TYPO3.
+\end_layout
+
+\begin_layout Subsubsection
+Tidy
+\end_layout
+
+\begin_layout Standard
+Tidy is used for HTML processing and needs to be available as cli or as
+ PHP module.
+\end_layout
+
+\begin_layout Standard
+In Debian you can install the PHP module as follow:
+\end_layout
+
+\begin_layout LyX-Code
+# sudo apt-get install php5-tidy
+\end_layout
+
+\begin_layout Subsubsection
+XSLT
+\end_layout
+
+\begin_layout Standard
+It is very likely that XSLT is needed in your CMP3 project, so this is a
+ dependency.
+\end_layout
+
+\begin_layout Standard
+In Debian you can install the PHP module as follow:
+\end_layout
+
+\begin_layout LyX-Code
+# sudo apt-get install php5-xsl
+\end_layout
+
+\begin_layout Standard
+This will give you XSLT 1 support.
+\end_layout
+
+\begin_layout Subsection
+Optional dependencies
+\end_layout
+
+\begin_layout Standard
+Following tools are not needed as long as none of the processors are used.
+\end_layout
+
+\begin_layout Subsubsection
+FOP
+\end_layout
+
+\begin_layout Standard
+FOP is a XSL-FO processor which is used to process PDF files from XML data.
+\end_layout
+
+\begin_layout Standard
+There are other (commercial) processors out there which could be easily
+ integrated in CMP3 but that isn't available yet.
+\end_layout
+
+\begin_layout Paragraph
+Installation
+\end_layout
+
+\begin_layout Standard
+In Debian you can install the fop package.
+ Version 1.0 or newer is recommended.
+\end_layout
+
+\begin_layout Standard
+Download fop eg.
+ https://launchpad.net/ubuntu/+source/fop/
+\end_layout
+
+\begin_layout Standard
+install:
+\end_layout
+
+\begin_layout LyX-Code
+# sudo dpkg -i fop_1.0.dfsg2-6_all.deb libfop-java_1.0.dfsg2-6_all.deb 
+\end_layout
+
+\begin_layout LyX-Code
+# sudo apt-get install -f 
+\end_layout
+
+\begin_layout LyX-Code
+# sudo apt-get install libservlet2.4-java
+\end_layout
+
+\begin_layout Standard
+You might need an updated version of libxmlgraphics-commons-java too.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Font install
+\end_layout
+
+\begin_layout Standard
+With FOP version prior to 1.0 you need to create font metrics with 
+\end_layout
+
+\begin_layout LyX-Code
+# fop-ttfreader FranklinITCBQ-Demi.ttf FranklinITCBQ-Demi.xml
+\end_layout
+
+\begin_layout Standard
+add font in fop.xconf
+\end_layout
+
+\begin_layout Standard
+HINT: Maybe the step with fop-ttfreader is no longer needed with FOP 1.0.
+\end_layout
+
+\begin_layout Paragraph
+Hyphenation
+\end_layout
+
+\begin_layout Standard
+CMP3 itself provides the hyphenation pattern for fop.
+ Please have a look in the example fop.xconf how to use that.
+\end_layout
+
+\begin_layout Subsubsection
+PoDoFo Impose
+\end_layout
+
+\begin_layout Standard
+This is used for imposition of PDF files.
+ If you do not know what imposition is you might want to have a look here:
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://en.wikipedia.org/wiki/Imposition
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Unfortunately the current Debian package lacks lua support for podofoimpose
+ which means you have to build the package by yourself and enable lua.
+\end_layout
+
+\begin_layout Standard
+#TODO more details
+\end_layout
+
+\begin_layout Standard
+The tested version 0.9.1.
+\end_layout
+
+\begin_layout Subsubsection
+SAXON (XSLT 2)
+\end_layout
+
+\begin_layout Standard
+Saxon is a XSLT processor which is needed when XSLT 2 is used.
+\end_layout
+
+\begin_layout Standard
+#TODO
+\end_layout
+
+\begin_layout Section
+Overview
+\end_layout
+
+\begin_layout Section
+Application How To
+\end_layout
+
+\begin_layout Standard
+Every CMP3 project is very specific so there is no predefined application
+ to convert data x to output y.
+ You can see CMP3 as a toolbox to create your own application.
+\end_layout
+
+\begin_layout Standard
+Therefore any CMP3 application is encapsulated inside it's own TYPO3 extension
+ (or folder).
+ All files (except the cmp3 php files) that are needed for processing should
+ be placed inside of that extension - even if the same files are available
+ inside of the cmp3 extension.
+ This includes xsl, configuration, fonts, templates and so on.
+\end_layout
+
+\begin_layout Section
+Tips and Tricks
+\end_layout
+
+\begin_layout Subsection
+PDF with XSL-FO and FOP
+\end_layout
+
+\begin_layout Subsubsection
+Hyphenation
+\end_layout
+
+\begin_layout LyX-Code
+			<fo:page-sequence 				master-reference="text-plain" 				id="rc_ucd">
+ 				<fo:flow flow-name="xsl-region-body"> 					<fo:block> 						<xsl:attribute
+ name="language"> 					      <xsl:value-of select="//cmp3:record/@language"
+ /> 					    </xsl:attribute>
+\end_layout
+
+\begin_layout Subsubsection
+Bleedbox (Margin)
+\end_layout
+
+\begin_layout Standard
+TypoScript setup:
+\end_layout
+
+\begin_layout LyX-Code
+// cli parameter 
+\begin_inset Newline newline
+\end_inset
+
+engine.fop.parameter = -param bleed '3mm'
+\end_layout
+
+\begin_layout Standard
+Add to you stylesheet:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<?xml version="1.0" encoding="UTF-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+
+<xsl:stylesheet
+\end_layout
+
+\begin_layout Plain Layout
+
+	xmlns:fo="http://www.w3.org/1999/XSL/Format"
+\end_layout
+
+\begin_layout Plain Layout
+
+	xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"
+\end_layout
+
+\begin_layout Plain Layout
+
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+\end_layout
+
+\begin_layout Plain Layout
+
+	xmlns:cmp3="http://www.bitmotion.de/cmp3/cmp3document"
+\end_layout
+
+\begin_layout Plain Layout
+
+	version="1.0">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	<xsl:param name="bleed"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			<fo:layout-master-set>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+				<fo:simple-page-master
+\end_layout
+
+\begin_layout Plain Layout
+
+					page-height="841.889763778pt"
+\end_layout
+
+\begin_layout Plain Layout
+
+					page-width="595.275590551pt"
+\end_layout
+
+\begin_layout Plain Layout
+
+					master-name="regular-odd">
+\end_layout
+
+\begin_layout Plain Layout
+
+					<xsl:attribute name="fox:bleed">
+\end_layout
+
+\begin_layout Plain Layout
+
+				      <xsl:value-of select="$bleed" />
+\end_layout
+
+\begin_layout Plain Layout
+
+				    </xsl:attribute>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+<?xml version="1.0" encoding="UTF-8"?>
+\end_layout
+
+\begin_layout LyX-Code
+<xsl:stylesheet
+\end_layout
+
+\begin_layout LyX-Code
+	xmlns:fo="http://www.w3.org/1999/XSL/Format"
+\end_layout
+
+\begin_layout LyX-Code
+	
+\series bold
+xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"
+\end_layout
+
+\begin_layout LyX-Code
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+\end_layout
+
+\begin_layout LyX-Code
+	xmlns:cmp3="http://www.bitmotion.de/cmp3/cmp3document"
+\end_layout
+
+\begin_layout LyX-Code
+	version="1.0">
+\end_layout
+
+\begin_layout LyX-Code
+	
+\series bold
+<xsl:param name="bleed"/>
+\end_layout
+
+\begin_layout LyX-Code
+		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+\end_layout
+
+\begin_layout LyX-Code
+			<fo:layout-master-set>
+\end_layout
+
+\begin_layout LyX-Code
+				<fo:simple-page-master
+\end_layout
+
+\begin_layout LyX-Code
+					page-height="841.889763778pt"
+\end_layout
+
+\begin_layout LyX-Code
+					page-width="595.275590551pt"
+\end_layout
+
+\begin_layout LyX-Code
+					master-name="regular-odd">
+\end_layout
+
+\begin_layout LyX-Code
+					
+\series bold
+<xsl:attribute name="fox:bleed">
+\end_layout
+
+\begin_layout LyX-Code
+
+\series bold
+				      <xsl:value-of select="$bleed" />
+\end_layout
+
+\begin_layout LyX-Code
+
+\series bold
+				    </xsl:attribute>
+\end_layout
+
+\begin_layout Subsubsection
+PDF-X
+\end_layout
+
+\begin_layout Standard
+TypoScript setup:
+\end_layout
+
+\begin_layout LyX-Code
+// cli parameter 
+\begin_inset Newline newline
+\end_inset
+
+engine.fop.parameter = -pdfprofile PDF/X-3:2003
+\end_layout
+
+\begin_layout Subsubsection
+output device profile (icc)
+\end_layout
+
+\begin_layout Standard
+fop.xconf:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<renderers>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<renderer mime="application/pdf">
+\end_layout
+
+\begin_layout Plain Layout
+
+		<output-profile>./CoatedFOGRA27.icc</output-profile>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Meta data
+\end_layout
+
+\begin_layout LyX-Code
+			</fo:layout-master-set>
+\end_layout
+
+\begin_layout LyX-Code
+			<fo:declarations> 				<x:xmpmeta xmlns:x="adobe:ns:meta/"> 					<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> 						<rdf:Description
+ 							rdf:about="" 							xmlns:dc="http://purl.org/dc/elements/1.1/"> 							<!
+-- Dublin Core properties go here --> 							<dc:title> 								<xsl:call-templa
+te name="title" /> 							</dc:title> 							<dc:creator> 								<xsl:call-temp
+late name="web_address" /> 							</dc:creator> 							<dc:description></dc:desc
+ription> 						</rdf:Description> 						<rdf:Description 							rdf:about=""
+ 							xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 							<!-- XMP properties
+ go here --> 							<xmp:CreatorTool>Bitmotion CMP3 - www.cross-media.net</xmp:Cre
+atorTool> 						</rdf:Description> 					</rdf:RDF> 				</x:xmpmeta> 			</fo:decl
+arations>
+\end_layout
+
+\begin_layout Section
+Links
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://wiki.scribus.net/canvas/PDF,_PostScript_and_Imposition_tools
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

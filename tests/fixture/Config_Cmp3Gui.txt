@@ -1,0 +1,214 @@
+
+options {
+
+    ##### META Options #####
+	item = CMP3GuiObjectSelect
+	item {
+	    Title = Produkt
+	    Description =
+	    properties {
+			Required = 1
+
+	    }
+	}
+
+	layouts = cmp3_gui_object_layout_selector
+
+    ##### Field Options #####
+	freitext_produkt = CMP3GuiObjectText
+	freitext_produkt {
+	    Title = Freitext
+	    Description = Beschreibungstext für Produkt
+	    properties {
+			Required = 1
+	    }
+	    // for cmp3
+	    meta {
+			type = text
+			format = multiline
+		}
+	}
+
+
+
+//	$objFieldArray[] = new Field($objControl->Id /* freitext_produkt */,  $this->objConfig->GetValue('meta.type'),  $this->objConfig->GetValue('meta.format'), $this->objConfig->GetValue('meta.meta'), $objControl->GetValue());
+
+
+	freitext_kontakt = cmp3_gui_object_text
+	freitext_kontakt {
+	    Title = Freitext
+	    Description = Beschreibungstext für Produkt
+	    properties {
+	    }
+	}
+
+	bilder_produkte = cmp3_gui_object_images
+	bilder_produkte {
+	    Title = Auswahl von Produt Bildern
+	    Description = Hier können Sie maximal 2 Produktbilder auswählen
+	    properties {
+			MaxSelectable = 2
+			SourceField = print_images
+			Required = 1
+	    }
+	}
+
+	bild_upload = cmp3_gui_object_upload
+	bild_upload {
+	    Title = Bild hochladen
+	    Description = Großes Bild für die Mitte
+	    properties {
+			AllowedFileTypes = jpg,jpeg,png,tif
+			UploadFolder = uploads/cmp3_gui/
+	    }
+	}
+
+	quality = cmp3_gui_object_radio
+	quality {
+	    type = configuration
+	    Title = Fertigstellung
+	    items {
+		print {
+		    Title = Druck
+		    Description = (Hohe Bildauflösung erforderlich)
+		    Value = 1
+		}
+		screen {
+		    Title = Bildschirm
+		    Description = (Niedrige Bildauflösung ausreichend)
+		    Value = 2
+		}
+	    }
+	    properties {
+
+	    }
+	}
+
+	web_address = cmp3_gui_object_hidden
+	web_address {
+	    properties {
+			Value = www.dividella.de
+	    }
+	}
+
+	ruler = cmp3_gui_object_html
+	ruler {
+	    properties {
+			Value = <hr class="itsabigone" />
+	    }
+	}
+
+	small_ruler = cmp3_gui_object_html
+	small_ruler {
+	    properties {
+			Value = <hr class="justalittleone" />
+	    }
+	}
+}
+
+
+layout {
+
+	1seite {
+	    Title = 1 Seite
+	    Description = Tolles PDF mit einer Seite
+	    Thumbnail = EXT:bla.jpg
+
+	    options {
+			10 = item
+			20 = ruler
+			30 = layouts
+			40 = freitext_produkt
+			45 = small_ruler
+			50 = freitext_kontakt
+			55 = small_ruler
+			60 = bilder_produkte
+			65 = small_ruler
+			70 = bild_upload
+			75 = ruler
+			80 = quality
+	    }
+	}
+}
+
+
+
+cmp3 {
+
+	#----- transformation -----------------------------------------------------
+
+	transformation.xml_to_pdf_with_fop = \Cmp3\Transformation\Fop
+	transformation.xml_to_pdf_with_fop {
+		stylesheet = EXT:cmp3/tests/fixture/fo-2/test-plain-cs3_edited.xsl
+		// config file for fop
+		engine.fop.config =
+		#EXT:cmp3/tests/fixture/fo-2/fop.xconf
+		// cli parameter
+		engine.fop.parameter =
+	}
+
+
+	transformation.xml_to_fo = \Cmp3\Transformation\Xslt1
+	transformation.xml_to_fo {
+		chain {
+			10.stylesheet = EXT:cmp3/tests/fixture/fo-2/test-plain-cs3_edited.xsl
+		}
+	}
+
+	#----- JOB -----------------------------------------------------
+
+	job.testXML.title = XML File
+	job.testXML {
+		parts {
+			10.preProcessing {
+				10 = \Cmp3\ContentProcessing\XPath_QRCode
+				10 {
+					xpath = //field[@name="test_url"]/value
+					backgroundColor = #FFFFFF
+					foreColor = #000000
+					padding = 0
+					moduleSize = 4
+					ecclevel = M
+				}
+			}
+		}
+	}
+
+	job.testFO.title = FO XML File
+	job.testFO {
+		parts {
+			10.preProcessing {
+				10 = \Cmp3\ContentProcessing\XPath_QRCode
+				10 {
+					xpath = //field[@name="test_url"]/value
+					backgroundColor = #FFFFFF
+					foreColor = #000000
+					padding = 0
+					moduleSize = 4
+					ecclevel = M
+				}
+			}
+			10.transformation= xml_to_fo
+		}
+	}
+
+	job.testPDF.title = XML File to PDF using FOP
+	job.testPDF {
+		parts {
+			10.preProcessing {
+				10 = \Cmp3\ContentProcessing\XPath_QRCode
+				10 {
+					xpath = //field[@name="test_url"]/value
+					backgroundColor = #FFFFFF
+					foreColor = #000000
+					padding = 0
+					moduleSize = 4
+					ecclevel = M
+				}
+			}
+			10.transformation= xml_to_pdf_with_fop
+		}
+	}
+
+}
+

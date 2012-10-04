@@ -1,0 +1,258 @@
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<book>
+
+	<bookinfo>
+		<title>Cross Media Publishing mit TYPO3</title>
+
+	</bookinfo>
+
+	<preface>
+		<title>CMP3</title>
+
+		<para>Cross Media Publishing mit TYPO3</para>
+	</preface>
+
+	<chapter>
+		<title>Einführung in CMP3</title>
+
+		<para>Mittels CMP3, dem Cross Media Publishing für TYPO3, erzeugen Sie
+			aus TYPO3 Inhalten unterschiedliche Ausgabeformate für den Druck -
+			und das per Knopfdruck.</para>
+		<para>Druckprodukte im PDF Format können in unterschiedlichsten
+			Layouts erzeugt werden. Weiterhin bietet CMP3 die Möglichkeit zur
+			Weiterverarbeitung der Inhalte zum Beispiel in InDesign oder anderen
+			externen Anwendungen.</para>
+		<para>CMP3 kann anhand einer manuellen Auswahl Inhalte verarbeiten,
+			aber auch in
+			automatische Prozesse eingebunden werden.</para>
+
+		<para>Cross Media Publishing bietet Ihnen ernorm viele Möglichkeiten,
+			Printprodukte zu erzeugen.</para>
+		<itemizedlist>
+			<listitem>
+				<para>Kataloge</para>
+			</listitem>
+			<listitem>
+				<para>Bücher</para>
+			</listitem>
+			<listitem>
+				<para>Magazine</para>
+			</listitem>
+			<listitem>
+				<para>Hauszeitschriften</para>
+			</listitem>
+			<listitem>
+				<para>Produktblätter</para>
+			</listitem>
+			<listitem>
+				<para>Internet-Seiten</para>
+			</listitem>
+			<listitem>
+				<para>Drucksachen (Visitenkarten, Briefpapier,...)</para>
+			</listitem>
+			<listitem>
+				<para>Individualisierte Dokumente</para>
+			</listitem>
+			<listitem>
+				<para>und mehr</para>
+			</listitem>
+		</itemizedlist>
+
+		<para>Eine ausführliche Darstellung finden Sie unter Anwendungsfälle
+			für Cross Media Publishing.</para>
+	</chapter>
+
+
+	<chapter>
+		<title>Anwendungsfälle für CMP3</title>
+
+		<para>CMP3 kann Ihren Publikationsprozess auf vielfältige Weise
+			verbessern. </para>
+		<para>So können Sie mit Hilfe von Cross Media Publishing für TYPO3
+			Kataloge, Magazine und Hauszeitschriften, Produktblätter und
+			individualisierte Dokumente wie Visitenkarten produzieren.</para>
+
+		<sect1>
+			<title>Druckfähige PDF Dokumente aus TYPO3</title>
+			<para>Mit Hilfe von CMP3 können automatisiert Inhalte aus TYPO3 in
+				ein druckfähiges PDF überführt werden. </para>
+
+			<bridgehead>Beispiel Seminare</bridgehead>
+			<para>Aus dem Seminarangebot auf der Webseite - in TYPO3 erstellt und
+				gepflegt - sollen individuelle Angebote für Kunden erstellt werden.
+			</para>
+			<para>Ein Redakteur wählt in TYPO3 die gewünschten Seminare aus.
+				Weiterhin wählt er eine Vorlage für das Design des PDF aus.
+				Schließlich fügt er noch ein Anschreiben sowie einen Angebotstext
+				hinzu. CMP3 erzeugt daraus ein Angebots-PDF, das an den Kunden
+				verschickt werden kann.</para>
+
+			<bridgehead>Beispiel Telefonbuch</bridgehead>
+			<para>Das Telefonbuch aus dem Intranet soll auch als druckfähiges PDF
+				jederzeit generiert werden können. </para>
+			<para>Mit Hilfe von CMP3 werden die Daten aus dem TYPO3
+				Telefonbuchmodul selektiert, mit einer Vorlage versehen und ein PDF
+				erzeugt. Der Nutzer kann diesen Prozess im Intranet durch Klicken
+				auf einen Link starten und erhält daraufhin ein aktuelles
+				Telefonbuch zum Downloaden.</para>
+		</sect1>
+
+		<sect1>
+			<title>Von TYPO3 nach InDesign</title>
+			<para>Cross Media Publishing für TYPO3 kann Inhalte aus TYPO3
+				exportieren, so dass sie in InDesign weiterverarbeitet werden
+				können. </para>
+			<bridgehead>Beispiel Produktkatalog</bridgehead>
+			<para>Die Online-Daten eines Produktkatalogs sollen für einen Print
+				Katalog genutzt werden. Dabei enthält der Print Katalog aufgrund der
+				Design-Vorgaben Seiten, die nicht automatisiert erzeugt werden
+				können, sondern gesetzt werden müssen. </para>
+			<para>Mit CMP3 können die Daten des Katalogs aus TYPO3 heraus in
+				einem InDesign Format exportiert und dort wieder importiert werden.
+				Dabei sind die Daten durch eine Vorlage schon formatiert, so dass
+				der InDesign Redakteur nur die individuellen Veränderungen setzen
+				muss. Anschließend wird das Druckprodukt aus InDesign heraus
+				erzeugt.</para>
+		</sect1>
+
+		<sect1>
+			<title>Beispiel Seitenzweige</title>
+			<para>Ganze Seitenzweige in TYPO3 sollen als Print Produkt
+				erscheinen. Dabei sollen bestimmte Seiten komplex gestaltet sein.
+			</para>
+			<para>In diesem Fall können mittels CMP3 Seitenzweige in ein InDesign
+				Format überführt werden. Dabei enthält das InDesign Format bereits
+				auf den InDesign Master abgestimmte Style Angaben, so dass die
+				Nachbearbeitung im InDesign auf die komplexen, nicht automatisiert
+				erzeugbaren Bereiche beschränkt werden kann. </para>
+		</sect1>
+
+		<sect1>
+			<title>Web-to-Print mit TYPO3</title>
+			<para>Mit Hilfe von CMP3 können individualisierte Inhalte mit
+				Vorgaben vermischt zu einem Printprodukt zusammengefügt werden.
+			</para>
+			<bridgehead>Beispiel Visitenkarten</bridgehead>
+			<para>In einem Unternehmen können Mitarbeiter personalisierte
+				Drucksachen wie beispielsweise Visitenkarten selber nachbestellen.
+			</para>
+			<para>In CMP3 sind einmalig die Vorlagen für die Visitenkarte
+				definiert und hinterlegt worden. Der Mitarbeiter gibt seine
+				individuellen Daten (Name, Vorname, E-Mail, Telefon, Fax) ein, wenn
+				diese noch nicht im TYPO3 vorliegen. Anschließend gibt der
+				Mitarbeiter die gewünschte Anzahl der Visitenkarten ein und
+				bestätigt den Druckauftrag. CMP3 generiert das druckfähige PDF, das
+				an die Druckerei verschickt wird. Diese produziert die
+				Visitenkarten.</para>
+		</sect1>
+
+	</chapter>
+
+
+	<chapter>
+		<title>Der Prozess - von TYPO3 zu Print</title>
+
+		<para>Üblicherweise werden die Daten in TYPO3 gepflegt und können dort
+			mittels CMP3 selektiert werden. Die Ausgabe kann als druckfähiges PDF
+			erfolgen oder zur Weiterverarbeitung in ein Satzprogramm (z.B.
+			InDesign) importiert werden. Im Auswahlprozess können Vorlagen für
+			die Darstellung im Print gewählt werden.</para>
+		<bridgehead>Datenquelle</bridgehead>
+		<para>Daten, aus denen ein Printprodukt erzeugt werden soll, können in
+			unterschiedlicher Form in TYPO3 vorliegen.</para>
+
+		<itemizedlist>
+			<listitem>
+				<para>TYPO3 Standard Inhaltselemente auf Seiten</para>
+			</listitem>
+			<listitem>
+				<para>Daten aus TYPO3 Module wie z.B. tt_products, tt_news, seminars
+					oder Eigenentwicklungen.</para>
+			</listitem>
+			<listitem>
+				<para>Daten aus weiteren Datenquellen</para>
+			</listitem>
+		</itemizedlist>
+
+		<bridgehead>Selektion der Daten</bridgehead>
+		<para>Mittels eines vorgegebenen Regelwerks werden die Inhalte für die
+			Aufbereitung als Druckprodukt selektiert. Es müssen also nicht
+			zwingend alle Daten aus TYPO3 in das Print Produkt wandern. </para>
+		<para>Eine Selektion kann z.B. sein:</para>
+
+		<itemizedlist>
+			<listitem>
+				<para>Manuelle Auswahl in der Redaktionsoberfläche</para>
+			</listitem>
+			<listitem>
+				<para>Seiten und Unterseiten</para>
+			</listitem>
+			<listitem>
+				<para>Elementtypen oder Ausschluss von Inhaltselementen (z.B. keine
+					Videos)</para>
+			</listitem>
+			<listitem>
+				<para>Datensätze (z.B. nur News)</para>
+			</listitem>
+			<listitem>
+				<para>Daten anhand anderer Kriterien (z.B. Datum)</para>
+			</listitem>
+			<listitem>
+				<para>und vieles mehr...</para>
+			</listitem>
+		</itemizedlist>
+
+
+		<para>Innerhalb der Selektion können auch Daten aus Dateien vor bzw.
+			nach den TYPO3 Daten eingefügt werden. So kann für die Erzeugung
+			eines PDFs zum Beispiel vor dem generierten PDF ein Anschreiben oder
+			ein Titelblatt hinzugefügt werden.</para>
+		<bridgehead>Vorlagen</bridgehead>
+		<para>Eine Vorlage bestimmt, wie die ausgewählten Daten im
+			Druckprodukt erscheinen werden. </para>
+		<para>Sie enthält beispielsweise Anweisungen, welches Template für die
+			Ausgabe als druckfähiges PDF benutzt werden soll.</para>
+		<bridgehead>Erzeugen des Druckprodukts</bridgehead>
+		<para>Im letzten Schritt entsteht aus den vorher gesammelten Daten das
+			Druckprodukt. Je nach Anforderung können verschiedene Ausgabewege von
+			Interesse sein.  </para>
+
+		<para>Die häufigsten Ausgabewege sind zum einen das PDF für die
+			sofortige Produktion und zum anderen die Übergabe nach InDesign zur
+			weiteren Bearbeitung (z. B. um Werbung an geeigneten Stellen
+			einzufügen).</para>
+	</chapter>
+
+
+	<chapter>
+		<title>Welche Technologie steckt in CMP3?</title>
+
+		<para>CMP3 verwendet ein flexibles modulares Konzept, um Inhalte für
+			verschiedene Ausgabekanäle zu verarbeiten. CMP3 ist dabei in der
+			Lage, unterschiedlichste Ausgabeformate zu erzeugen.</para>
+		<para>Dieses Konzept impliziert eine Kette von Transformationen. Dabei
+			kann jedes Modul ausgetauscht oder den individuellen Bedürfnissen
+			angepasst werden.</para>
+		<para>Dieses Vorgehen erlaubt eine große Flexibilität bei der Wahl des
+			richtigen Ausgabeformats. Zudem kann die Ausgabe jedes
+			Zwischenschrittes verwendet werden, um mit externen Werkzeugen
+			weiterverarbeitet zu werden.</para>
+		<para>Dabei entstehen zum Beispiel finale Formate wie PDF, die direkt
+			als Druckvorlage verwendet werden können oder auch Zwischenformate
+			wie OpenDocument (ODF), DocBook oder InDesign (ICML, XML), die
+			entsprechend weiterverarbeitet werden können.</para>
+		<para>Da hierbei die Industriestandards XML und XSLT zum Einsatz
+			kommen, ist nahezu jedes beliebige Zielformat denkbar. Dabei kann auf
+			die breite Palette XML verarbeitender Werkzeuge zurückgegriffen
+			werden.</para>
+		<para>Für die PDF Ausgabe verwenden wir beispielsweise XSL-FO als
+			Layout-Beschreibungssprache. Hier kann auf eine breite Palette von
+			Prozessoren wie zum Beispiel Apache FOP zurückgegriffen werden um das
+			eigentliche PDF zu erzeugen.</para>
+		<para>Neben TYPO3 können auch andere Datenquellen abgefragt und deren
+			Inhalte in das Zieldokument eingebunden werden.</para>
+
+	</chapter>
+
+
+</book>

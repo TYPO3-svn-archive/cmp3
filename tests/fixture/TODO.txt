@@ -1,0 +1,46 @@
+
+
+
+
+#----- transformation -----------------------------------------------------
+
+transformation.cmp3cml_to_docbook {
+	chain {
+		10.processor = \Cmp3\ContentProcessing\Xslt1
+		10.stylesheet = EXT:cmp3/xsl/bla.xsl
+	}
+}
+
+transformation.cmp3cml_to_icml {
+	chain {
+		10.processor = \Cmp3\ContentProcessing\Xslt1
+		10.stylesheet = EXT:cmp3/xsl/bla.xsl
+
+		20.processor = \Cmp3\ContentProcessing\Xslt2
+		20.stylesheet = EXT:cmp3/xsl/blubb.xsl
+	}
+}
+
+transformation.xslfo_to_pdf {
+	chain {
+		10.processor = \Cmp3\Processor_FOP
+		10.page {
+
+			// Set paper size to: A4, Letter, etc.
+			size = A4
+
+			// portrait, landscape
+			orientation = portrait
+
+			// Page width and height (default unit millimeter)
+			width =
+			height =
+
+			// margins in mm
+			marginTop = 30
+			marginBottom = 30
+			marginLeft = 15
+			marginRight = 15
+		}
+	}
+}

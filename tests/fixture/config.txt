@@ -1,0 +1,284 @@
+
+
+source {
+
+	#----------------------------------------------------------
+
+	xmlfile = \Cmp3\Source\File
+	xmlfile.title = cmp3xml file
+	xmlfile {
+		type = CMP3XML
+		path = EXT:cmp3_test/input/example01_cmp3xml.xml
+		processing {
+			10 = ContentProcessor_XSLT1
+			10.stylesheet = EXT:t3pn_cmp3/xsl/main.xsl
+		}
+	}
+
+
+	#----------------------------------------------------------
+
+	t3 = \Cmp3\Source\Typo3
+	t3.title = TYPO3 Seiten
+	t3 {
+#TODO
+		language = 0
+		languageOverlayMode = hideNonTranslated
+		contentFallback =
+		enableFields = FE
+
+
+		selection {
+			10 = pages_from_home
+#			20 = content_from_somewhere
+		}
+
+
+		queries {
+			pages_from_home.table = pages
+			pages_from_home.id = 42
+			// type can be "default" (deleted, versioning, ...), "disabled", "starttime", "endtime", "fe_group" (keys from "enablefields" in TCA).
+			pages_from_home.enableFields = default
+#TODO set fe_group values
+			pages_from_home.constraints {
+				doktype < 200
+			}
+			pages_from_home.subqueries = sub_pages,content
+
+			sub_pages.table = pages
+			sub_pages.id.exclude = 23,24
+			sub_pages.enableFields = default
+			sub_pages.order = sorting
+			sub_pages.constraints {
+					pid = PARENT.uid
+					doktype = < 200
+				}
+			sub_pages.subqueries = content
+
+
+			content.table = tt_content
+			content.id.exclude = 23,24
+			content.enableFields = default
+			content.constraints {
+					CType = 'text'
+					colpos = 0
+					pid = PARENT.uid
+				}
+			// will query records for plugin ctypes
+			content.diveDeeper = 1
+
+
+			news.table = tt_news
+			news.enableFields = default
+			news.constraints {
+					CType = text
+					colpos = 1
+					pid = PARENT.pid
+				}
+
+			content_from_somewhere.table = tt_content
+			content_from_somewhere.id = 34
+
+		}
+
+
+
+		processing {
+			10 = tx_bla_some_class
+		}
+	}
+
+
+	#----------------------------------------------------------
+
+	ttnews = \Cmp3\Source\Typo3
+	ttnews.title = TYPO3 ttnews
+	ttnews {
+#TODO
+		language = 0
+		languageOverlayMode = hideNonTranslated
+		contentFallback =
+		enableFields = FE
+
+
+		selection {
+			10 = news
+		}
+
+		queries {
+			news.table = tt_news
+			news.enableFields = default
+			news.constraints {
+					pid = 5
+				}
+		}
+
+
+
+		processing {
+			10 = tx_bla_some_class
+		}
+	}
+
+
+	#----------------------------------------------------------
+
+	external = \Cmp3\Source\Pdo
+	external.title = Externe Quelle
+	external {
+		dsn = mysql:host=localhost;dbname=test
+		username = test
+		password = test
+		attributes (
+			PDO::MYSQL_ATTR_USE_BUFFERED_QUERY = true
+		)
+		query (
+			SELECT name, colour, calories
+			FROM fruit
+			WHERE calories < 30 AND colour = 1
+		)
+
+		processing {
+			10 = tx_bla_xslt
+			10.stylesheet = fileadmin/bla.xsl
+		}
+	}
+
+
+	#----------------------------------------------------------
+
+	30 = tx_SomeClass
+	30.title = Current TYPO3 page
+	30 {
+		// special config
+	}
+
+
+	#----------------------------------------------------------
+
+	40 = FILE
+	40.title = XML File
+	40 {
+		type = cmp3xml
+		path = ...bla.xml
+	}
+
+
+	#----------------------------------------------------------
+
+	50 = FILE
+	50.title = XML File
+	50 {
+		type = pdf
+		path = ...bla.pdf
+	}
+}
+
+
+
+
+#----- transformation -----------------------------------------------------
+
+transformation.cmp3cml_to_docbook {
+	chain {
+		10.processor = \Cmp3\ContentProcessor\XSLT1
+		10.stylesheet = EXT:cmp3/xsl/bla.xsl
+	}
+}
+
+transformation.cmp3cml_to_icml {
+	chain {
+		10.processor = \Cmp3\ContentProcessor\XSLT1
+		10.stylesheet = EXT:cmp3/xsl/bla.xsl
+
+		20.processor = \Cmp3\ContentProcessor\XSLT2
+		20.stylesheet = EXT:cmp3/xsl/blubb.xsl
+	}
+}
+
+transformation.xslfo_to_pdf {
+	chain {
+		10.processor = \Cmp3\Processor_FOP
+		10.page {
+
+			// Set paper size to: A4, Letter, etc.
+			size = A4
+
+			// portrait, landscape
+			orientation = portrait
+
+			// Page width and height (default unit millimeter)
+			width =
+			height =
+
+			// margins in mm
+			marginTop = 30
+			marginBottom = 30
+			marginLeft = 15
+			marginRight = 15
+		}
+	}
+}
+
+
+#----- JOB -----------------------------------------------------
+
+
+job.xmlfile.title = XML File from file source with extra processing
+job.xmlfile {
+	parts {
+		10.source = xmlfile
+		10.postProcessing {
+			10 = \Cmp3\ContentProcessor\XSLT1
+			10.stylesheet = EXT:t3pn_cmp3/xsl/main.xsl
+		}
+	}
+}
+
+
+job.pdffile.title = PDF File
+job.pdffile {
+
+	parts {
+		10.source = xmlfile
+		10.preProcessing {
+			10 = tx_bla_some_class
+			20 = tx_bla_another_class
+		}
+		10.transformation = something
+
+
+		20.source = external
+		20.preProcessing {
+			20 = tx_bla_another_class
+		}
+		20.transformation = something
+		20.postProcessing {
+			10 = compose
+			10.overlay = fileadmin/footer.pdf
+			10.background = fileadmin/background.pdf
+		}
+	}
+
+	postProcessing {
+		10 = merge
+	}
+}
+
+job.xmlfile2.title = XML File from typo3 db source
+job.xmlfile2 {
+	parts {
+		10.source = t3
+	}
+}
+
+job.icmlfile.title = ICML File from file source
+job.icmlfile {
+	parts {
+		10.source = xmlfile
+		10.transformation = cmp3cml_to_icml
+	}
+}
+
+
+

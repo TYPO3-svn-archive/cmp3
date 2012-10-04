@@ -290,12 +290,12 @@ class DocumentCmp3 extends \DOMDocument {
 
 
 		// <cmp3document>
-		// <cmp3document xmlns="http://www.Bitmotion/cmp3/cmp3document" xmlns:cmp3="http://www.Bitmotion/cmp3/cmp3document">
-		$objRoot = $this->createElementNS('http://www.Bitmotion/cmp3/cmp3document', 'cmp3document');
+		// <cmp3document xmlns="http://www.bitmotion.de/cmp3/cmp3document" xmlns:cmp3="http://www.bitmotion.de/cmp3/cmp3document">
+		$objRoot = $this->createElementNS('http://www.bitmotion.de/cmp3/cmp3document', 'cmp3document');
 
 
 		parent::appendChild($objRoot);
-		$objRoot->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:cmp3', 'http://www.Bitmotion/cmp3/cmp3document');
+		$objRoot->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:cmp3', 'http://www.bitmotion.de/cmp3/cmp3document');
 
 		// <meta>
 		$objMeta = parent::createElement('meta');

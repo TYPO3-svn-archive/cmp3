@@ -51,7 +51,7 @@ abstract class Tools {
 		if ($strContent) {
 			$strContent = str_replace('<', '<rich:', $strContent);
 			$strContent = str_replace('<rich:/', '</rich:', $strContent);
-			$strContent= '<value xmlns:rich="http://www.Bitmotion/cmp3/cmp3xhtml">' . $strContent . '</value>';
+			$strContent= '<value xmlns:rich="http://www.bitmotion.de/cmp3/cmp3xhtml">' . $strContent . '</value>';
 
 			$objXmlElement = $ownerDocument->createDocumentFragment();
 			$objXmlElement->appendXML($strContent);

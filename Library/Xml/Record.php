@@ -62,7 +62,7 @@ class Record extends \DOMDocument
 		// <record type="tt_content" subtype="text">
 
 		#$objRoot = parent::createElement('record');
-		$objRoot = parent::createElementNS('http://www.Bitmotion/cmp3/cmp3document', 'record');
+		$objRoot = parent::createElementNS('http://www.bitmotion.de/cmp3/cmp3document', 'record');
 		$objRoot->setAttribute('type', $strType);
 		$objRoot->setAttribute('subtype', $strSubType);
 		$objRoot->setAttribute('language', $strLang);

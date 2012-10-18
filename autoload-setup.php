@@ -51,7 +51,7 @@
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Typo3CurrentPage', PATH_cmp3.'Library/Fetcher/Typo3CurrentPage.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\File', PATH_cmp3.'Library/Fetcher/File.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\my_t3lib_timeTrack', PATH_cmp3.'Library/Fetcher/Typo3PageHiresImage.php');
-\Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Typo3Page', PATH_cmp3.'Library/Fetcher/Typo3PageHiresImage.php');
+\Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Typo3PageHiresImage', PATH_cmp3.'Library/Fetcher/Typo3PageHiresImage.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Url', PATH_cmp3.'Library/Fetcher/Url.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\FetcherAbstract', PATH_cmp3.'Library/Fetcher/FetcherAbstract.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\CurrentNextApplicationContent', PATH_cmp3.'Library/Fetcher/CurrentNextApplicationContent.php');

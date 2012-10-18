@@ -40,6 +40,8 @@ if (!class_exists('\Cmp3\Autoload', false)) {
 	// initialize library paths - needed for Zend stuff
 	\Cmp3\Autoloader::AddIncludePath(PATH_cmp3.'Library/');
 
+	\Cmp3\Autoloader::RegisterFile('TestCaseBase', PATH_cmp3.'/tests/TestCaseBase.php');
+
 
 	// include autoloading registry
 	include(PATH_cmp3.'autoload-setup.php');
@@ -53,5 +55,8 @@ if (!class_exists('\Cmp3\Autoload', false)) {
 if (TYPO3_MODE) {
 	include(PATH_cmp3.'system/typo3/ext_localconf.php');
 }
-error_log(__FILE__ . __LINE__);
+
+
+
+
 ?>

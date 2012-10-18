@@ -15,7 +15,7 @@
  * TABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
- * @subpackage PDF
+ * @subpackage Source
  * @package    CMP3
  * @copyright  Copyright (c) 2010 Bitmotion
  * @license    http://www.gnu.org/licenses/gpl-2.0.html     GNU General Public License, version 2
@@ -32,7 +32,7 @@ namespace Cmp3\Source;
  *
  *
  * @author Rene Fritz (r.fritz@bitmotion.de)
- * @subpackage PDF
+ * @subpackage Source
  * @package    CMP3
  */
 class ContentBox extends SourceAbstract {

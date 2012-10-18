@@ -38,7 +38,7 @@ namespace Cmp3\ContentProcessing;
  * STATUS: beta
  *
  * @author Rene Fritz (r.fritz@bitmotion.de)
- * @subpackage PDF
+ * @subpackage ContentProcessing
  * @package    CMP3
  */
 class HtmlInsertHiresImages extends ProcessorAbstract {

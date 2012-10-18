@@ -15,7 +15,7 @@
  * TABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  *
- * @subpackage PDF
+ * @subpackage Data
  * @package    CMP3
  * @copyright  Copyright (c) 2012 Bitmotion
  * @license    http://www.gnu.org/licenses/gpl-2.0.html     GNU General Public License, version 2
@@ -32,7 +32,7 @@ namespace Cmp3\Data;
  *
  *
  * @author Rene Fritz (r.fritz@bitmotion.de)
- * @subpackage Job
+ * @subpackage Data
  * @package    CMP3
  */
 class Exception extends \Cmp3\Exception {}

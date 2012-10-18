@@ -38,12 +38,3 @@ namespace Cmp3\System;
 class Exception extends \Cmp3\Exception {}
 
 
-
-/**
- * Exception which might be thrown by Exec
- *
- * @author Rene Fritz (r.fritz@bitmotion.de)
- * @subpackage System
- * @package    CMP3
- */
-class ExecException extends Exception {}

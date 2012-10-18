@@ -30,17 +30,6 @@ namespace Cmp3\Fetcher;
 
 
 
-#FIXME remove
-
-class my_t3lib_timeTrack extends t3lib_timeTrack {
-	function push($tslabel, $value='')  {
-#_d($tslabel);
-		parent::push($tslabel, $value);
-	}
-}
-
-
-
 
 /**
  * {@inheritdoc}
@@ -49,7 +38,7 @@ class my_t3lib_timeTrack extends t3lib_timeTrack {
  * @subpackage Fetcher
  * @package    CMP3
  */
-class Typo3Page extends Url { #Fetcher_Abstract {
+class Typo3PageHiresImage extends Url { #Fetcher_Abstract {
 
 
 	// @todo we're not necessarily render HTML
@@ -75,7 +64,7 @@ class Typo3Page extends Url { #Fetcher_Abstract {
 
 
 # renders current page
-		$GLOBALS['TT'] = new my_t3lib_timeTrack();
+		$GLOBALS['TT'] = new t3lib_timeTrack();
 
 		$TSFE_copy = $GLOBALS['TSFE'];
 

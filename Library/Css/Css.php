@@ -67,7 +67,7 @@ namespace Cmp3\Css;
  *
  *
  * @author Rene Fritz (r.fritz@bitmotion.de)
- * @subpackage PDF
+ * @subpackage Css
  * @package    CMP3
  *
  * parts of the code:

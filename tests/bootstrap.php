@@ -57,26 +57,7 @@ require_once('init.php');
 
 chdir(__DIR__);
 
-// define some test paths
-define ('PATH_fixture', __DIR__.'/fixture/');
-define ('PATH_fixtureSitePath', t3lib_extMgm::siteRelPath('cmp3') . 'tests/fixture/');
-define ('PATH_output', __DIR__.'/output/');
-
-
-
-#echo __DIR__."\n";
-#echo $strExtensionPath."\n";
-#echo $_EXTKEY."\n";
-
-
-require_once('helper.php');
-
-#include('TestCaseBase.php');
-\Cmp3\Autoloader::RegisterFile('TestCaseBase', __DIR__.'/TestCaseBase.php');
-
 
 $GLOBALS['TYPO3_DB']->store_lastBuiltQuery = true;
-
-error_log(__FILE__ . __LINE__);
 
 

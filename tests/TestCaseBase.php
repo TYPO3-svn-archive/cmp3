@@ -1,7 +1,21 @@
 <?php
 
 
-abstract class TestCaseBase extends PHPUnit_Framework_TestCase {
+// define some test paths
+if (!defined('PATH_fixture')) {
+	define ('PATH_fixture', __DIR__.'/fixture/');
+	define ('PATH_fixtureSitePath', t3lib_extMgm::siteRelPath('cmp3') . 'tests/fixture/');
+	define ('PATH_output', __DIR__.'/output/');
+}
+
+require_once(__DIR__.'/helper.php');
+
+
+
+
+
+
+abstract class TestCaseBase extends Tx_Phpunit_TestCase { #PHPUnit_Framework_TestCase {
 
 
 	/**

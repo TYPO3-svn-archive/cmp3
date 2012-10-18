@@ -26,6 +26,7 @@
 namespace Cmp3\ContentProcessing;
 
 
+
 /**
  * Content processors which performs bb to html code replacement
  *
@@ -47,6 +48,10 @@ class BBCodeToHtml extends ProcessorAbstract {
 	public function Process (\Cmp3\Content\ContentInterface $objContent)
 	{
 		if ($content = $objContent->GetData()) {
+
+			if (!is_string($content)) {
+				throw new Exception('String expected in ' . __METHOD__);
+			}
 
 			# Formatierungen
 			$content = preg_replace('#\[b\](.*)\[/b\]#isU', "<b>$1</b>", $content);

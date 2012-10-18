@@ -56,6 +56,7 @@ namespace Cmp3\Files;
  * @property-read string $Dirname
  * @property-read string $AbsoluteDirname
  * @property-read integer $Mtime
+ * @property-read integer $Atime
  * @property-read integer $Tstamp
  * @property-read integer $Ctime
  * @property-read integer $Crdate
@@ -449,9 +450,10 @@ class File implements FileInterface {
 
 
 	/**
-	 * Allows for the enabling of DB profiling while in middle of the script
+	 * Test if the given property exists in the meta data
 	 *
-	 * @return void
+     * @param $strName string Name of the meta data property
+	 * @return boolean
 	 */
 	public function FieldExists($strName)
 	{

@@ -488,7 +488,7 @@ class TypoScriptParser {
 
 	/**
 	 * Checks the input string (un-parsed TypoScript) for include-commands ("<INCLUDE_TYPOSCRIPT: ....")
-	 * Use: TSParser::checkIncludeLines()
+	 * Use: TypoScriptParser::checkIncludeLines()
 	 *
 	 * @param	string		Unparsed TypoScript
 	 * @param	integer		Counter for detecting endless loops
@@ -548,7 +548,7 @@ class TypoScriptParser {
 	function checkIncludeLines_array($array)	{
 		reset($array);
 		while(list($k)=each($array))	{
-			$array[$k]=TSParser::checkIncludeLines($array[$k]);
+			$array[$k]=TypoScriptParser::checkIncludeLines($array[$k]);
 		}
 		return $array;
 	}

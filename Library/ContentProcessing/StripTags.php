@@ -52,6 +52,7 @@ class StripTags extends ProcessorAbstract {
 
 			if ($this->objLogger) $this->objLogger->Info(__CLASS__ . ' Processes content by stripping tags');
 
+#FIXME use real config here
 			$content = strip_tags($content, is_string($this->objConfig) ? $this->objConfig : '');
 
 			$this->blnHasModified = true;

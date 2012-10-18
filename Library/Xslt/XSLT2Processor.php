@@ -245,7 +245,7 @@ class XML_XSLT2Processor {
         }elseif (preg_match('/^AltovaXML$/i', $processor)) {
             $this->processor = 'AltovaXML';
         }else {
-            throw new \Cmp3\Exception('Unsupported XSLT processor provided to XML_XSLT2Processor::__construct()', 1);
+            throw new Exception('Unsupported XSLT processor provided to XML_XSLT2Processor::__construct()', 1);
         }
 
         //"|\.NET" will be added once issues with actually testing it are over.
@@ -253,16 +253,16 @@ class XML_XSLT2Processor {
             $this->interface = $interface;
             if ($interface === 'COM' && $this->processor === 'AltovaXML') {
                 if (!extension_loaded('com_dotnet')) {
-                    throw new \Cmp3\Exception('The COM interface requires the COM extension, but the COM extension is not available', 6);
+                    throw new Exception('The COM interface requires the COM extension, but the COM extension is not available', 6);
                 }else {
                     $this->instance = new COM('AltovaXML.Application', $processorPath);
                 }
                 return;
             }elseif (!(preg_match('/^(JAVA|(JAVA\-)?CLI)$/', $interface) && $this->processor === 'SAXON') && !($interface === 'CLI' && $this->processor === 'AltovaXML')) {
-                throw new \Cmp3\Exception("The supplied XSLT 2.0 processor ({this->processor}) does not support the supplied interface ({$interface}) provided to XML_XSLT2Processor::__construct()", 5);
+                throw new Exception("The supplied XSLT 2.0 processor ({this->processor}) does not support the supplied interface ({$interface}) provided to XML_XSLT2Processor::__construct()", 5);
             }
         }else {
-            throw new \Cmp3\Exception('Unsupported interface for XSLT 2.0 processors provided to XML_XSLT2Processor::__construct()', 3);
+            throw new Exception('Unsupported interface for XSLT 2.0 processors provided to XML_XSLT2Processor::__construct()', 3);
         }
 
             $runtimeFound = $processorPathFound = false;
@@ -273,7 +273,7 @@ class XML_XSLT2Processor {
                 $this->processorPath = is_string($processorPath) ? $this->_url2filepath($processorPath) : $this->_url2filepath($processorPath['processor']);
                 if ((!is_executable($this->processorPath) && !(bool)preg_match('/^JAVA|\.NET/', $interface)) || (!is_file($this->processorPath) && preg_match('/^JAVA|\.NET/', $interface))) {
                     $this->processorPath = null;
-                    throw new \Cmp3\Exception('Invalid path to XSLT processor binary given to XML_XSLT2Processor::__construct()', 2);
+                    throw new Exception('Invalid path to XSLT processor binary given to XML_XSLT2Processor::__construct()', 2);
                 }
                 $processorPathFound = true;
             }
@@ -281,7 +281,7 @@ class XML_XSLT2Processor {
                 $this->runtime = $this->_url2filepath($processorPath['runtime']);
                 if (!is_executable($this->runtime)) {
                     $this->runtime = null;
-                    throw new \Cmp3\Exception('Invalid path to JRE given to XML_XSLT2Processor::__construct()', 7);
+                    throw new Exception('Invalid path to JRE given to XML_XSLT2Processor::__construct()', 7);
                 }
                 $runtimeFound = true;
             }
@@ -320,10 +320,10 @@ class XML_XSLT2Processor {
                 }
             }
             if (!$processorPathFound) {
-                throw new \Cmp3\Exception('Unable to automatically resolve path to XSLT processor binary in XML_XSLT2Processor::__construct()', 4);
+                throw new Exception('Unable to automatically resolve path to XSLT processor binary in XML_XSLT2Processor::__construct()', 4);
             }
             if (!$runtimeFound) {
-                throw new \Cmp3\Exception('Unable to automatically resolve path to JRE binary in XML_XSLT2Processor::__construct()', 4);
+                throw new Exception('Unable to automatically resolve path to JRE binary in XML_XSLT2Processor::__construct()', 4);
             }
     }
 
@@ -358,10 +358,10 @@ class XML_XSLT2Processor {
                     $this->stylesheet = $this->_url2filepath($stylesheet);
                     return true;
                 }else {
-                    throw new \Cmp3\Exception('The stylesheet "' . $stylesheet . '" was not found at the specified location.', 101);
+                    throw new Exception('The stylesheet "' . $stylesheet . '" was not found at the specified location.', 101);
                 }
             }else {
-                throw new \Cmp3\Exception('Invalid argument for stylesheet supplied. If you have tried to supply a DOMDocument object, it is possible that the XSLT file is not a well formed XML document. Check with the libxml funcitons for details.', 102);
+                throw new Exception('Invalid argument for stylesheet supplied. If you have tried to supply a DOMDocument object, it is possible that the XSLT file is not a well formed XML document. Check with the libxml funcitons for details.', 102);
             }
         }
         catch (Exception $e) {
@@ -409,10 +409,10 @@ class XML_XSLT2Processor {
     {
         try {
             if ((is_array($name) && (is_null($value) || is_string($value))) && !is_null($mode)) {
-                throw new \Cmp3\Exception('Forth argument supplied to XML_XSLT2Processor::setParameter() but was not expected.', 201);
+                throw new Exception('Forth argument supplied to XML_XSLT2Processor::setParameter() but was not expected.', 201);
             }
             if (!is_null($namespace) && !$this->_validAgainstSchemaType($namespace, 'anyURI')) {
-                throw new \Cmp3\Exception('The supplied namespace is not a valid URI.', 202);
+                throw new Exception('The supplied namespace is not a valid URI.', 202);
             }
             if (!is_array($name) && !is_null($value)) {
                 $name = array($name => $value);
@@ -437,10 +437,10 @@ class XML_XSLT2Processor {
                 if (empty($valErrors)) {
                     return true;
                 }else {
-                    throw new \Cmp3\Exception(serialize($valErrors), 0);
+                    throw new Exception(serialize($valErrors), 0);
                 }
             }elseif ($namespace !== null) {
-                throw new \Cmp3\Exception('The supplied option(s) to XML_XSLT2Processor::setParameter() are not in a known namespace. Try to use NULL instead.', 205);
+                throw new Exception('The supplied option(s) to XML_XSLT2Processor::setParameter() are not in a known namespace. Try to use NULL instead.', 205);
             }else {
                 $options = array(
                     'SAXON' => array(
@@ -476,7 +476,7 @@ class XML_XSLT2Processor {
                 if (empty($valErrors)) {
                     return true;
                 }else {
-                    throw new \Cmp3\Exception(serialize($valErrors), 0);
+                    throw new Exception(serialize($valErrors), 0);
                 }
             }
         }
@@ -605,21 +605,21 @@ class XML_XSLT2Processor {
                     }else {
                         //Only triggered on errors
                         if ($conditionSourceFolder && $conditionOutputFolder && $this->processor !== 'SAXON') {
-                            throw new \Cmp3\Exception('The folder transformation feature is only available to SAXON.', 401);
+                            throw new Exception('The folder transformation feature is only available to SAXON.', 401);
                         }elseif (in_array($uri, $this->tmpFiles, true) || $this->processor !== 'SAXON' || ($this->processor === 'SAXON' && !($conditionOutputFolder || $conditionSourceFolder))) {
                             if (!$conditionSourceFile) {
-                                throw new \Cmp3\Exception('The source file was not found at the specified location.', 402);
+                                throw new Exception('The source file was not found at the specified location.', 402);
                             }
                         }else {
                             if (!$conditionSourceFolder) {
-                                throw new \Cmp3\Exception('The source folder was not found at the specified location.', 403);
+                                throw new Exception('The source folder was not found at the specified location.', 403);
                             }elseif (!$conditionOutputFolder) {
-                                throw new \Cmp3\Exception('The output folder was not found at the specified location. You must create it before the transformation.', 404);
+                                throw new Exception('The output folder was not found at the specified location. You must create it before the transformation.', 404);
                             }
                         }
                     }
                 }else {
-                    throw new \Cmp3\Exception('Invalid argument for source document supplied. If you have tried to supply a DOMDocument object, it is possible that the XML file is not well formed. Check with the libxml funcitons for details.', 405);
+                    throw new Exception('Invalid argument for source document supplied. If you have tried to supply a DOMDocument object, it is possible that the XML file is not well formed. Check with the libxml funcitons for details.', 405);
                 }
             }
             catch (Exception $e) {

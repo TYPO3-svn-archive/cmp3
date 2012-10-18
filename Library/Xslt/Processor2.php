@@ -42,7 +42,7 @@ class Processor2 extends ProcessorAbstract {
 	 *
 	 * @param \Cmp3\Xslt\DOMDocument|string $xml Content to be processed
 	 * @param \Cmp3\Xslt\DOMDocument|string $xsl_file DOMDocument or filename
-	 * @throws \Cmp3\Exception
+	 * @throws \Cmp3\Xslt\Exception
 	 * @return \Cmp3\Xslt\FALSE|string
 	 */
 	public function Process ($xml, $xsl_file)
@@ -67,7 +67,7 @@ class Processor2 extends ProcessorAbstract {
 
 			if ($result_xml === false) {
 				#_d($xp->getErrors());
-				throw new \Cmp3\Exception(__METHOD__ . $xp->getErrors());
+				throw new Exception(__METHOD__ . $xp->getErrors());
 			}
 
 			return $result_xml;

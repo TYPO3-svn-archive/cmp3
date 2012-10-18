@@ -67,7 +67,7 @@ abstract class ProcessorAbstract implements ProcessorInterface {
 	 *
 	 * @param string|\DOMDocument 	$xml Content to be processed
 	 * @return \DOMDocument
-	 * @throws \Cmp3\Exception
+	 * @throws \Cmp3\Xslt\Exception
 	 */
 	protected function MakeXmlDom($xml)
 	{
@@ -76,7 +76,7 @@ abstract class ProcessorAbstract implements ProcessorInterface {
 				$dom_xml = $xml;
 
 			} else {
-				throw new \Cmp3\Exception(__METHOD__ . ' Passed object is not a DOMDocument but ' . get_class($xml));
+				throw new Exception(__METHOD__ . ' Passed object is not a DOMDocument but ' . get_class($xml));
 			}
 
 		} elseif($xml) {
@@ -89,7 +89,7 @@ abstract class ProcessorAbstract implements ProcessorInterface {
 			$dom_xml->loadXML($xml);
 
 		} else {
-			throw new \Cmp3\Exception(__METHOD__ . ' Passed xml is empty.');
+			throw new Exception(__METHOD__ . ' Passed xml is empty.');
 		}
 
 		return $dom_xml;
@@ -100,7 +100,7 @@ abstract class ProcessorAbstract implements ProcessorInterface {
 	 *
 	 * @param string|\DOMDocument 	$xsl_file DOMDocument or filename
 	 * @return \DOMDocument
-	 * @throws \Cmp3\Exception
+	 * @throws \Cmp3\Xslt\Exception
 	 */
 	protected function MakeXslDom($xsl_file)
 	{
@@ -109,7 +109,7 @@ abstract class ProcessorAbstract implements ProcessorInterface {
 				$dom_xsl = $xsl_file;
 
 			} else {
-				throw new \Cmp3\Exception(__METHOD__ . ' Passed object is not a DOMDocument but ' . get_class($xsl_file));
+				throw new Exception(__METHOD__ . ' Passed object is not a DOMDocument but ' . get_class($xsl_file));
 			}
 
 		} elseif(file_exists($xsl_file)) {
@@ -122,7 +122,7 @@ abstract class ProcessorAbstract implements ProcessorInterface {
 			$dom_xsl->load($xsl_file);
 
 		} else {
-			throw new \Cmp3\Exception(__METHOD__ . ' Passed stylesheet is not a file: ' . $xsl_file);
+			throw new Exception(__METHOD__ . ' Passed stylesheet is not a file: ' . $xsl_file);
 		}
 
 		return $dom_xsl;

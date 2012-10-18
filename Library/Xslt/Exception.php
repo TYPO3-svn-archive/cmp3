@@ -23,62 +23,18 @@
  */
 
 
-
 namespace Cmp3\Xslt;
 
 
+
 /**
- * xslt1 processor
+ * main xml exception
+ *
  *
  * @author Rene Fritz (r.fritz@bitmotion.de)
  * @subpackage Xslt
  * @package    CMP3
  */
-class Processor1 extends ProcessorAbstract {
-
-
-	/**
-	 * Returns the processed content
-	 *
-	 * @param \Cmp3\Xslt\DOMDocument|\DOMDocument|string $xml Content to be processed
-	 * @param \Cmp3\Xslt\DOMDocument|\DOMDocument|string $xsl_file DOMDocument or filename
-	 * @throws \Cmp3\Xslt\Exception
-	 * @return bool|string
-	 */
-	public function Process ($xml, $xsl_file)
-	{
-		$dom_xml = $this->MakeXmlDom($xml);
-		$dom_xsl = $this->MakeXslDom($xsl_file);
-
-		if($dom_xml AND $dom_xsl) {
-
-			/*
-			 * Create XSL-Processor and do XSL-Transformation
-			 */
-			$xp = new \XSLTProcessor();
-			$xp->importStylesheet($dom_xsl);
-			$result_xml = $xp->transformToXml($dom_xml);
-
-			if ($result_xml === false) {
-				#_d(libxml_get_last_error());
-				#_d(libxml_get_errors());
-				$objError = libxml_get_last_error();
-				throw new Exception(__METHOD__ . ': ' .$objError->message);
-			}
-
-			return $result_xml;
-		}
-
-		return false;
-	}
-
-}
-
-
-
-
-
-
-
+class Exception extends \Cmp3\Exception {}
 
 

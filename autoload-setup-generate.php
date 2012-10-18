@@ -1,6 +1,6 @@
 <?php
 
-#die();
+die();
 
 if (!isCli()) {
 	echo "<pre>\n";

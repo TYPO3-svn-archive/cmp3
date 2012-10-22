@@ -1,3 +1,0 @@
-
-tidy php extension is needed or tidy has to be installed so it can be called from the commandline
-

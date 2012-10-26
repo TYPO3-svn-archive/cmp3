@@ -50,10 +50,16 @@ class Webkit extends ConverterAbstract {
 	{
 		if ($this->objLogger) $this->objLogger->Info(__CLASS__ . ' Start converter processing');
 
-		$strBinary = $this->objConfig->GetFilename('engine.wkhtmltopdf.binaryPath');
-
-		if (!$strBinary OR !file_exists($strBinary)) {
-			throw new Exception('wkhtmltopdf binary is not available. Path: "' . $strBinary . '"');
+		try {
+			$strBinary = $this->objConfig->GetFilename('engine.wkhtmltopdf.binaryPath');
+			if (!$strBinary OR !file_exists($strBinary)) {
+				throw new Exception('wkhtmltopdf binary is not available. Path: "' . $strBinary . '"');
+			}
+		} catch (\Cmp3\Exception $e) {
+			$strBinary = $this->objConfig->GetValue('engine.wkhtmltopdf.binaryPath');
+			if (!$strBinary) {
+				throw new Exception('wkhtmltopdf binary is not available. Configure with engine.wkhtmltopdf.binaryPath');
+			}
 		}
 
 		if ($objContent->Type !== \Cmp3\Content\ContentType::HTML) {

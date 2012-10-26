@@ -49,9 +49,16 @@ class Prince extends ConverterAbstract {
 	{
 		if ($this->objLogger) $this->objLogger->Info(__CLASS__ . ' Start converter processing');
 
-		$strBinary = $this->objConfig->GetFilename('engine.prince.binaryPath');
-		if (!$strBinary OR !file_exists($strBinary)) {
-			throw new Exception('prince binary is not available. Path: "' . $strBinary . '"');
+		try {
+			$strBinary = $this->objConfig->GetFilename('engine.prince.binaryPath');
+			if (!$strBinary OR !file_exists($strBinary)) {
+				throw new Exception('prince binary is not available. Path: "' . $strBinary . '"');
+			}
+		} catch (\Cmp3\Exception $e) {
+			$strBinary = $this->objConfig->GetValue('engine.prince.binaryPath');
+			if (!$strBinary) {
+				throw new Exception('prince binary is not available. Configure with engine.prince.binaryPath');
+			}
 		}
 
 

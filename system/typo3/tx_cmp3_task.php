@@ -55,7 +55,7 @@ class tx_cmp3_task extends tx_scheduler_Task {
 	public function ClearTemp()
 	{
 		return $this->RemovedOldFiles(
-				PATH_site . "typo3temp/tx_cmp3/",
+				\Cmp3\Cmp3::$TempPath,
 				false,
 				'temp');
 	}
@@ -69,7 +69,7 @@ class tx_cmp3_task extends tx_scheduler_Task {
 	public function ClearLog()
 	{
 		return $this->RemovedOldFiles(
-				PATH_site . "typo3temp/tx_cmp3/log/",
+				\Cmp3\Cmp3::$LogPath,
 				'log',
 				'log');
 	}

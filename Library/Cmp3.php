@@ -28,6 +28,7 @@ namespace Cmp3;
 
 
 /**
+ * This is just a container for some globally needed values
  *
  * @package    CMP3
  * @subpackage    Base
@@ -64,7 +65,3 @@ abstract class Cmp3 {
 
 
 }
-
-Cmp3::$TempPath = PATH_site . 'typo3temp/tx_cmp3/';
-Cmp3::$LogPath = PATH_site . 'typo3temp/tx_cmp3/log/';
-Cmp3::$CachePath = PATH_site . 'typo3temp/tx_cmp3/cache/';

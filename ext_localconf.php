@@ -57,6 +57,9 @@ if (TYPO3_MODE) {
 }
 
 
+\Cmp3\Cmp3::$TempPath = PATH_site . 'typo3temp/tx_cmp3/';
+\Cmp3\Cmp3::$LogPath = PATH_site . 'typo3temp/tx_cmp3/log/';
+\Cmp3\Cmp3::$CachePath = PATH_site . 'typo3temp/tx_cmp3/cache/';
 
 
 ?>

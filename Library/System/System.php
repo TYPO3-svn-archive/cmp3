@@ -228,7 +228,7 @@ abstract class tx_cmp3 {
 				// FIXME: this will break the TYPO3 installation, if something goes wrong, because
 				// ResolvePath is also called in ext_localconf.php and/or ext_tables.php
 				// But we need the Exception here, because the System Object's ResolvePath relies on it
-				throw new Exception ('No path registered for key: '.$key);
+				throw new \Cmp3\System\Exception ('No path registered for key: '.$key);
 		}
 		return self::$_paths[$key].$filepath;
 	}

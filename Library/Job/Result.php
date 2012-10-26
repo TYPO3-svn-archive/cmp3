@@ -68,7 +68,7 @@ class Result implements ResultInterface {
 	public $ErrorMessage = false;
 
 	/**
-	 * Flag that indicates if errors occured while processing
+	 * Log text
 	 * @var string
 	 */
 	public $Log = '';

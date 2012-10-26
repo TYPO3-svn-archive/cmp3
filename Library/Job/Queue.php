@@ -71,14 +71,7 @@ class Queue {
 
 		$objJob->ID = $this->CreateJobID();
 
-		$objLog = new \Cmp3\Log\Logger($objLogWriter);
-		$objLog->SetJobID($objJob->ID);
-		$objLogWriter = new \Zend_Log_Writer_Stream(\Cmp3\Cmp3::$LogPath . $objJob->ID . '.log');
-		$objLog->AddWriter($objLogWriter, 'Stream');
-		$objLogWriter = new \Cmp3\Log\LogWriter_Memory();
-		$objLog->AddWriter($objLogWriter, 'Memory');
-
-		$objJob->Logger = $objLog;
+		$objJob->Logger = $this->CreateLogger($objJob);
 
 		self::$objJobArray[$objJob->ID] = $objJob;
 
@@ -122,11 +115,7 @@ class Queue {
  */
 
 		if (!$objLog->objLogger) {
-			$objLogWriter = new \Zend_Log_Writer_Stream(\Cmp3\Cmp3::$LogPath . $objJob->ID . '.log');
-			$objLog = new \Cmp3\Log\Logger($objLogWriter);
-			$objLog->SetJobID($objJob->ID);
-
-			$objJob->Logger = $objLog;
+			$objJob->Logger = $this->CreateLogger($objJob);
 		}
 
 		self::$objJobArray[$objJob->ID] = $objJob;
@@ -204,6 +193,24 @@ class Queue {
 	protected function CreateJobID()
 	{
 		return number_format(microtime(true), 2, '', '');
+	}
+
+
+	/**
+	 *
+	 * @param \Cmp3\Job\Job
+	 * @return \Cmp3\Log\Logger
+	 */
+	protected function CreateLogger($objJob)
+	{
+		$objLog = new \Cmp3\Log\Logger();
+		$objLog->SetJobID($objJob->ID);
+		$objLogWriter = new \Zend_Log_Writer_Stream(\Cmp3\Cmp3::$LogPath . $objJob->ID . '.log');
+		$objLog->AddWriter($objLogWriter, 'Stream');
+		$objLogWriter = new \Cmp3\Log\LogWriter_Memory();
+		$objLog->AddWriter($objLogWriter, 'Memory');
+
+		return $objLog;
 	}
 
 }

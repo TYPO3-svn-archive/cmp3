@@ -66,38 +66,4 @@ class Typo3CurrentPage extends FetcherAbstract {
 		return \Cmp3\Content\ContentType::HTML;
 	}
 
-
-	/**
-	 * rewrite image sources using hires images from uploads/
-	 * needs xclass
-	 *
-	 * @param string $content
-	 */
-	protected function ReplaceImagesWithHiresVersion(& $content) {
-		if (is_object($GLOBALS['TSFE'])) {
-			preg_match_all ('#"[^"]*(typo3temp/pics/[^"]*)"#', $content, $matches);
-
-		    foreach ($matches[1] as $match) {
-			    if ($match AND $filenameUploads = $GLOBALS['TSFE']->imagesOnPageMapping[$match]) {
-			    	if ($this->_isImageFile($filenameUploads)) {
-			    		$content = str_replace($match, $filenameUploads, $content);
-			    	}
-			    }
-			}
-		}
-	}
-
-
-	/**
-	 * returns true if a file is an image type: 'png', 'jpg', 'jpeg', 'gif'
-	 *
-	 * @param string $filenameUploads
-	 * @return boolean
-	 */
-	protected function _isImageFile($filenameUploads) {
-		$extension = strtolower(array_pop(explode(".", $filenameUploads)));
-		$allowed = array('png', 'jpg', 'jpeg', 'gif');
-		return in_array($extension, $allowed);
-	}
-
 }

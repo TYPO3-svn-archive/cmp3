@@ -2,7 +2,12 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass article
+\textclass book
+\begin_preamble
+\catcode`\→=\active
+\def →{>}%
+\definecolor{linkcolor}{rgb}{0.7,0.1,0.1}
+\end_preamble
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -17,16 +22,27 @@
 \font_sc false
 \font_osf false
 \font_sf_scale 100
-\font_tt_scale 90
+\font_tt_scale 80
 
 \graphics default
-\default_output_format default
+\default_output_format pdf4
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement h
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "filecolor=linkcolor,linkcolor=linkcolor,urlcolor=linkcolor"
 \papersize a4paper
 \use_geometry false
 \use_amsmath 0
@@ -51,7 +67,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\listings_params "basicstyle={\small},stringstyle={\ttfamily},tabsize=4"
+\listings_params "aboveskip=10pt,basicstyle={\small},belowskip=10pt,escapechar={§},stringstyle={\ttfamily},tabsize=4,xleftmargin=15pt"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -65,8 +81,39 @@
 CMP3 - Cross Media Publishing
 \end_layout
 
-\begin_layout Date
-9.5.2012 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.cross-media.net
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.bitmotion.de
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Author
@@ -100,7 +147,7 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Introduction
 \end_layout
 
@@ -134,9 +181,9 @@ The target format is not necessarily a print format like PDF, but could
 \end_layout
 
 \begin_layout Standard
-For more information look at 
+For more information you may have a look at 
 \begin_inset Flex URL
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -148,8 +195,18 @@ http://www.cross-media.net
 .
 \end_layout
 
-\begin_layout Section
+\begin_layout Chapter
 Installation
+\end_layout
+
+\begin_layout Standard
+While CMP3 is currently a TYPO3 extension, CMP3 itself is (or should be)
+ independent from TYPO3.
+ In principle CMP3 works without TYPO3.
+\end_layout
+
+\begin_layout Section
+As TYPO3 extension
 \end_layout
 
 \begin_layout Standard
@@ -157,20 +214,31 @@ Install the extension as usual.
  Please read the following sections for needed dependencies.
 \end_layout
 
-\begin_layout Subsection
-Dependencies
-\end_layout
-
-\begin_layout Subsubsection
-TYPO3
+\begin_layout Section
+Standalone
 \end_layout
 
 \begin_layout Standard
-While this is currently a TYPO3 extension, CMP3 itself is (or should be)
- independent from TYPO3.
+Currently nothing available here.
+ The plan is to move CMP3 to 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.packagist.org
 \end_layout
 
-\begin_layout Subsubsection
+\end_inset
+
+ at some point, so we will explain here how to install the composer package.
+\end_layout
+
+\begin_layout Section
+Dependencies
+\end_layout
+
+\begin_layout Subsection
 Tidy
 \end_layout
 
@@ -187,7 +255,7 @@ In Debian you can install the PHP module as follow:
 # sudo apt-get install php5-tidy
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 XSLT
 \end_layout
 
@@ -208,7 +276,7 @@ In Debian you can install the PHP module as follow:
 This will give you XSLT 1 support.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Optional dependencies
 \end_layout
 
@@ -216,7 +284,7 @@ Optional dependencies
 Following tools are not needed as long as none of the processors are used.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 FOP
 \end_layout
 
@@ -229,7 +297,7 @@ There are other (commercial) processors out there which could be easily
  integrated in CMP3 but that isn't available yet.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Installation
 \end_layout
 
@@ -264,7 +332,7 @@ You might need an updated version of libxmlgraphics-commons-java too.
  
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Font install
 \end_layout
 
@@ -284,7 +352,7 @@ add font in fop.xconf
 HINT: Maybe the step with fop-ttfreader is no longer needed with FOP 1.0.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Hyphenation
 \end_layout
 
@@ -293,7 +361,7 @@ CMP3 itself provides the hyphenation pattern for fop.
  Please have a look in the example fop.xconf how to use that.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 PoDoFo Impose
 \end_layout
 
@@ -327,7 +395,7 @@ Unfortunately the current Debian package lacks lua support for podofoimpose
 The tested version 0.9.1.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 SAXON (XSLT 2)
 \end_layout
 
@@ -339,11 +407,911 @@ Saxon is a XSLT processor which is needed when XSLT 2 is used.
 #TODO
 \end_layout
 
-\begin_layout Section
-Overview
+\begin_layout Chapter
+Technical overview
+\end_layout
+
+\begin_layout Standard
+We've learned in our projects and customer requests that it is just NOT
+ possible to build one, three or five applications that would fit for most
+ of our cross media projects.
+ Therefore CMP3 is not an application.
+ It's a tool you can easily use in your application.
+ To make a tool that you can use in multiple projects you have to make it
+ modular.
+ So you have to identify the typical elements of a cross media application.
+\end_layout
+
+\begin_layout Standard
+A cross media application typically has ...
+\end_layout
+
+\begin_layout Itemize
+an element to fetch the data from a data source
+\end_layout
+
+\begin_layout Itemize
+some processing of the data 
+\end_layout
+
+\begin_layout Itemize
+and finally a transformation to produce the target format like pdf
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/processing-chain.png
+	lyxscale 50
+	width 80text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Processing parts of CMP3
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Processing-parts-of"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And that's exactly the way we splitted the functionality in separate parts
+ in CMP3 to make it modular and reusable.
 \end_layout
 
 \begin_layout Section
+Processing chains
+\end_layout
+
+\begin_layout Standard
+As figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Processing-parts-of"
+
+\end_inset
+
+ suggests the whole process is organized in a chain.
+ Those processing chains are the main concept of CMP3 and makes it very
+ flexible.
+\end_layout
+
+\begin_layout Standard
+Let's have a closer look at the parts of the processing chain.
+\end_layout
+
+\begin_layout Subsection
+Data Source
+\end_layout
+
+\begin_layout Standard
+A data source have a fetcher which does the database queries for example.
+ But a data source does also a normalization which means the data is transformed
+ into an XML format
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We will see in later examples that it is possible not to use CMP3XML but
+ any other format.
+\end_layout
+
+\end_inset
+
+.
+ That format doesn't only provide the data itself but also some meta information
+ of the data types which could be integer, string or a date for example.
+ Additionally the CMP3XML provides meta information about the format of
+ the data which could be line, multiline, rich text, header and things like
+ that.
+\end_layout
+
+\begin_layout Subsection
+Content processing
+\end_layout
+
+\begin_layout Standard
+The next step in the processing chain is content processing.
+ In most applications it is needed to do some content processing before
+ the final transformation.
+ In CMP3 you can use as many content processors as you want.
+ Each processor returns the modified CMP3XML which is passed to the next
+ processor and so on.
+\end_layout
+
+\begin_layout Subsection
+Transformation
+\end_layout
+
+\begin_layout Standard
+When the processing chain is finished a transformation is done which produces
+ the final output format like pdf.
+\end_layout
+
+\begin_layout Subsection
+Chain configuration
+\end_layout
+
+\begin_layout Standard
+As you can see the whole process is organized in a chain.
+ And what's so special in CMP3 is that those chains are not hardcoded in
+ PHP but they can be defined using TypoScript
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+For those who don't use CMP3 in TYPO3 context, TypoScript is the configuration
+ 'language' of TYPO3.
+ We use TypoScript to define a processing chain even if we don't use TYPO3.
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "showstringspaces=false,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+source.single_product = 
+\backslash
+Cmp3
+\backslash
+Source
+\backslash
+Typo3Xml 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  fetcher = 
+\backslash
+Cmp3
+\backslash
+Source
+\backslash
+Typo3Query fetcher { 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    selection { 
+\end_layout
+
+\begin_layout Plain Layout
+
+      10 = product 
+\end_layout
+
+\begin_layout Plain Layout
+
+    } 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    queries.product { 
+\end_layout
+
+\begin_layout Plain Layout
+
+      table = tx_kmpproduct_product 
+\end_layout
+
+\begin_layout Plain Layout
+
+      enableFields = default 
+\end_layout
+
+\begin_layout Plain Layout
+
+      constraints { 
+\end_layout
+
+\begin_layout Plain Layout
+
+        uid = {JobData:item} 
+\end_layout
+
+\begin_layout Plain Layout
+
+      } 
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+processing.single_product {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  10 = 
+\backslash
+Cmp3
+\backslash
+ContentProcessing
+\backslash
+XPath_Typo3RteRender
+\end_layout
+
+\begin_layout Plain Layout
+
+  10.xpath = //field[@format="typo3_rte"]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  20 = 
+\backslash
+Cmp3
+\backslash
+ContentProcessing
+\backslash
+XPath_Typo3TableRender
+\end_layout
+
+\begin_layout Plain Layout
+
+  20.xpath = //field[@format="typo3_table"]
+\end_layout
+
+\begin_layout Plain Layout
+
+  20.headerPos = left
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  30 = 
+\backslash
+Cmp3
+\backslash
+ContentProcessing
+\backslash
+XPath_QRCode
+\end_layout
+
+\begin_layout Plain Layout
+
+  30 {
+\end_layout
+
+\begin_layout Plain Layout
+
+    xpath = //field[@name="print_url"]/value
+\end_layout
+
+\begin_layout Plain Layout
+
+    backgroundColor = #FFFFFF
+\end_layout
+
+\begin_layout Plain Layout
+
+    foreColor = #000000
+\end_layout
+
+\begin_layout Plain Layout
+
+    padding = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    moduleSize = 4
+\end_layout
+
+\begin_layout Plain Layout
+
+    ecclevel = M
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+transformation.xml2pdf_fop = 
+\backslash
+Cmp3
+\backslash
+Transformation
+\backslash
+Fop
+\end_layout
+
+\begin_layout Plain Layout
+
+transformation.xml2pdf_fop {
+\end_layout
+
+\begin_layout Plain Layout
+
+  stylesheet = EXT:myproject/leaflet_a4.xsl
+\end_layout
+
+\begin_layout Plain Layout
+
+  engine.fop.config = EXT:myproject/fop.xconf
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can find configuration for a data source, processing and transformation.
+ As you see there are names used like 
+\emph on
+single_product
+\emph default
+ or 
+\emph on
+xml2pdf_fop
+\emph default
+.
+ Giving them names means you can add more processing parts with other names.
+\end_layout
+
+\begin_layout Subsection
+Job
+\end_layout
+
+\begin_layout Standard
+Finally we have to connect those parts in a so called „job configuration“.
+ As you can see we use the names of configured data source, processing and
+ transformation.
+ This makes it easier to combine those elements to new chains.
+ In a job we can also define multiple parts, and composer.
+ Let's say you want to produce a document which consists of two parts with
+ different processing chains.
+ You can easily add a part 20 here which produces a second PDF file for
+ example.
+ 
+\end_layout
+
+\begin_layout Standard
+A so called composer could be used to merge those files and produces one
+ PDF file.
+ In this example we use a composer which modifies the generated PDF to shrink
+ it's file size.
+ As you can see using TypoScript to define the processing chains makes the
+ system very flexible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+job.MyProject.title = Leaflet A4
+\end_layout
+
+\begin_layout Plain Layout
+
+job.MyProject {
+\end_layout
+
+\begin_layout Plain Layout
+
+  parts {
+\end_layout
+
+\begin_layout Plain Layout
+
+    10.source = single_product
+\end_layout
+
+\begin_layout Plain Layout
+
+    10.preProcessing = single_product
+\end_layout
+
+\begin_layout Plain Layout
+
+    10.transformation = xml2pdf_fop
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  compose {
+\end_layout
+
+\begin_layout Plain Layout
+
+    10 = 
+\backslash
+Cmp3
+\backslash
+Composer
+\backslash
+PdfShrink
+\end_layout
+
+\begin_layout Plain Layout
+
+    10.quality = ebook
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example to render a leaflet with a different layout only the transformation
+ has to be replaced.
+ This modular approach allows also to replace the transformation by another
+ one that produces a different output format like InDesign.
+ (icml, idml, tagged text).
+ And of course you can define totally different jobs with other data sources
+ and different processing to produce a great variety of target formats and
+ layouts.
+ 
+\end_layout
+
+\begin_layout Section
+Running a job
+\end_layout
+
+\begin_layout Standard
+So how do I use CMP3 in my own applications? 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=PHP"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$objQueue = new 
+\backslash
+Cmp3
+\backslash
+Job
+\backslash
+Queue;
+\end_layout
+
+\begin_layout Plain Layout
+
+$objJob = $objQueue->CreateJob($strJob, $objConfig);
+\end_layout
+
+\begin_layout Plain Layout
+
+$objQueue->RunJob($objJob);
+\end_layout
+
+\begin_layout Plain Layout
+
+$objResult = $objQueue->GetResult($objJob);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is the PHP code which is needed to call the CMP3 System and render
+ a job.
+ And while we are using TypoScript to define the job, it is not needed to
+ change the PHP code for other transformations or layouts.
+ If you need a processing which can't be done with the current system, just
+ write a small Content Processor for your needs, add it to the processing
+ chain in TypoScript and you are done.
+ 
+\end_layout
+
+\begin_layout Section
+Possibilities
+\end_layout
+
+\begin_layout Standard
+What does this all mean? To show you 
+\emph on
+how
+\emph default
+ flexible CMP3 is, here is a more complex example.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/complex-example.png
+	lyxscale 50
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A little more complex CMP3 project
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We want to produce a document in PDF format which consist of four parts.
+ Each part has different data sources and different content formats.
+ We have different data sources like a PDF file, TYPO3, a database and some
+ web content.
+ For each of those sources we use different processing chains to produce
+ PDF.
+ Finally a composer merges the four parts into one PDF file.
+ 
+\end_layout
+
+\begin_layout Subsection
+Target formats
+\end_layout
+
+\begin_layout Standard
+With CMP3 one can use XSLT or PHP to create a target format, which means
+ (sometimes with the help of external tools) any target format is imaginable.
+ Here are some examples.
+\end_layout
+
+\begin_layout Itemize
+PDF
+\end_layout
+
+\begin_layout Itemize
+XML
+\end_layout
+
+\begin_layout Itemize
+DocBook
+\end_layout
+
+\begin_layout Itemize
+Tex
+\end_layout
+
+\begin_layout Itemize
+InDesign: Tagged Text, ICML, IDML
+\end_layout
+
+\begin_layout Itemize
+HTML
+\end_layout
+
+\begin_layout Itemize
+OpenDocument (ODF)
+\end_layout
+
+\begin_layout Itemize
+RTF
+\end_layout
+
+\begin_layout Itemize
+Text
+\end_layout
+
+\begin_layout Subsection
+Processing chains
+\end_layout
+
+\begin_layout Standard
+Due to it's flexible concept a great variety of precessing chains are imaginable.
+ To give you an impression what can be done we give here some examples:
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XSLT → XSL-FO → [FO Processor] → PDF
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XSLT → DocBook → XSL-FO → [FO Processor] → PDF
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XSLT → DocBook → RTF
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XSLT → DocBook → Word
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XSLT → DocBook → ePub 
+\end_layout
+
+\begin_layout Standard
+As you see all these chains use CMP3XML as intermediate format but that
+ is not a requirement.
+ You can build chains to process any format.
+ Here are some examples:
+\end_layout
+
+\begin_layout Itemize
+Data Source → HTML → MPDF → PDF
+\end_layout
+
+\begin_layout Itemize
+Data Source → HTML → XSLT → XSL-FO→ [FO Processor] → PDF
+\end_layout
+
+\begin_layout Itemize
+Data Source → HTML → XSLT → XML
+\end_layout
+
+\begin_layout Itemize
+Data Source → Text → PHP → Other text format
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XSL-FO → [FO Processor] → PDF 
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML→ XSLT → DocBook → ICML
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XSLT → ICML
+\end_layout
+
+\begin_layout Itemize
+Data Source → CMP3XML → XML 
+\end_layout
+
+\begin_layout Standard
+You can even build chains that makes absolutely no sense.
+ That means CMP3 is not responsible for a failing chain, it's all your fault.
+ In other words, if anything goes wrong in a chain, the processing stops
+ with an error.
+ While it makes sense to show a web page even if one small box fails to
+ show it's content, generating a print PDF with wrong or missing data is
+ a big mistake and might costs thousands of Pesos.
+\end_layout
+
+\begin_layout Section
+Intermediate formats
+\end_layout
+
+\begin_layout Standard
+In principle no intermediate format is necessary for any cross media application
+, but we want a solution were components can be reused so we don't have
+ to start at zero for every application.
+\end_layout
+
+\begin_layout Standard
+Having a limited set of intermediate formats makes it possible to provide
+ a library of transformations that can be reused in multiple projects.
+\end_layout
+
+\begin_layout Standard
+That was the main idea behind CMP3XML.
+\end_layout
+
+\begin_layout Subsection
+CMP3XML
+\end_layout
+
+\begin_layout Standard
+CMP3XML is used as the main intermediate format in CMP3.
+ The format includes all data enriched with meta data which gives information
+ about the data type and format of the data.
+ This helps in the later transformation to generate target document formats
+ as PDF, HTML, XML, DocBook and others.
+ 
+\end_layout
+
+\begin_layout Standard
+The cmp3 document is in most cases just the source for transformations and
+ is not used directly in other applications.
+ The transformations are done using XSLT.
+ There are predefined transformations to generate DocBook for example.
+\end_layout
+
+\begin_layout Subsection
+DocBook
+\end_layout
+
+\begin_layout Standard
+While CMP3XML - as the intermediate format - will be used in most cases
+ to generate DocBook, DocBook itself can be seen as intermediate format
+ too.
+\end_layout
+
+\begin_layout Standard
+DocBook is a semantic markup language for technical documentation.
+ It was originally intended for writing technical documents related to computer
+ hardware and software but it can be used for any other sort of documentation.
+ As a semantic language, DocBook enables its users to create document content
+ in a presentation-neutral form that captures the logical structure of the
+ content; that content can then be published in a variety of formats.
+ In relation to DocBook semantic means that the documents elements are marked
+ (markup) with tags to give the elements a meaning like header, paragraph
+ or numbered list.
+ 
+\end_layout
+
+\begin_layout Standard
+That given it is clear that DocBook is meant to be used for structured documents
+ in contrast to CMP3XML which tries to provide as much semantic data as
+ possible.
+ But CMP3XML is not designed for structured documents.
+ Therefore using CMP3XML to generate DocBook is not an requirement.
+ If your data source could be transformed to DocBook more easily without
+ CMP3XML, just do it.
+\end_layout
+
+\begin_layout Standard
+That makes clear that DocBook might not be the right format for other document
+ types like catalogs, mailings and so on.
+ For specialized documents a direct transformation could be used instead
+ of the intermediate DocBook format.
+ On the other hand such a solution means to build a transformation from
+ ground up and much more bigger task than customizing the DocBook transformation.
+\end_layout
+
+\begin_layout Standard
+For DocBook rendering (transformation) multiple solutions exists to create
+ HTML, PDF and other formats.
+ Because of the sematic markup which is targeted to structured documents
+ the generated output is a structured document in all output formats.
+ Having the DocBook format a wide variety of output formats can be generated
+ like PDF, TeX, HTML, RTF and others.
+\end_layout
+
+\begin_layout Subsection
+DITA
+\end_layout
+
+\begin_layout Standard
+DITA is also a good candidate for an intermediate format but nothing was
+ done in this direction.
+\end_layout
+
+\begin_layout Chapter
 Application How To
 \end_layout
 
@@ -354,34 +1322,140 @@ Every CMP3 project is very specific so there is no predefined application
 \end_layout
 
 \begin_layout Standard
-Therefore any CMP3 application is encapsulated inside it's own TYPO3 extension
- (or folder).
- All files (except the cmp3 php files) that are needed for processing should
- be placed inside of that extension - even if the same files are available
- inside of the cmp3 extension.
+Therefore any CMP3 application is encapsulated inside it's own folder or
+ - in case of TYPO3 - in it's own extension.
+ All files (except the CMP3 PHP files) that are needed for processing should
+ be placed inside of that application folder - even if the same files are
+ available inside of the CMP3 folder.
  This includes xsl, configuration, fonts, templates and so on.
 \end_layout
 
+\begin_layout Standard
+While the API will not change easily the provided xsl files are meant as
+ toolbox or starting point.
+ They will be improved by time and therefore will be changed.
+ Copying all needed files into your application will not break it when CMP3
+ is updated.
+\end_layout
+
 \begin_layout Section
-Tips and Tricks
+Examples
+\end_layout
+
+\begin_layout Standard
+Currently no further documentation is available how to build your own CMP3
+ application, but we have examples.
 \end_layout
 
 \begin_layout Subsection
+Tests
+\end_layout
+
+\begin_layout Standard
+Have a look in the 
+\emph on
+tests
+\emph default
+ folder for unit tests.
+ While many of them are not interesting for application developers other
+ tests whole jobs with processing and output.
+\end_layout
+
+\begin_layout Standard
+Look into the 
+\emph on
+fixture
+\emph default
+ folder for source data and configurations and - after running the tests
+ - look into the 
+\emph on
+output
+\emph default
+ folder for the results.
+\end_layout
+
+\begin_layout Subsection
+Demo
+\end_layout
+
+\begin_layout Standard
+There's a demo application as TYPO3 extension called cmp3_demo.
+ This is a backend module providing several examples you can try.
+ Have a look in the source code of the module, the 
+\emph on
+fixture
+\emph default
+ folder for source data and configurations and the 
+\emph on
+output
+\emph default
+ folder for the results.
+\end_layout
+
+\begin_layout Chapter
+Tips and Tricks
+\end_layout
+
+\begin_layout Section
 PDF with XSL-FO and FOP
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Hyphenation
 \end_layout
 
-\begin_layout LyX-Code
-			<fo:page-sequence 				master-reference="text-plain" 				id="rc_ucd">
- 				<fo:flow flow-name="xsl-region-body"> 					<fo:block> 						<xsl:attribute
- name="language"> 					      <xsl:value-of select="//cmp3:record/@language"
- /> 					    </xsl:attribute>
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=XML,tabsize=4"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<fo:page-sequence
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Plain Layout
+
+ 	master-reference="text-plain"
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	id="rc_ucd">
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	<fo:flow flow-name="xsl-region-body">
+\end_layout
+
+\begin_layout Plain Layout
+
+ 		<fo:block>
+\end_layout
+
+\begin_layout Plain Layout
+
+  		<xsl:attribute name="language">
+\end_layout
+
+\begin_layout Plain Layout
+
+ 		 	<xsl:value-of select="//cmp3:record/@language" />
+\end_layout
+
+\begin_layout Plain Layout
+
+  		</xsl:attribute>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Bleedbox (Margin)
 \end_layout
 
@@ -403,6 +1477,7 @@ Add to you stylesheet:
 
 \begin_layout Standard
 \begin_inset listings
+lstparams "tabsize=4"
 inline false
 status open
 
@@ -423,7 +1498,9 @@ status open
 
 \begin_layout Plain Layout
 
-	xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"
+	§
+\backslash
+textbf{xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"}§
 \end_layout
 
 \begin_layout Plain Layout
@@ -447,7 +1524,9 @@ status open
 
 \begin_layout Plain Layout
 
-	<xsl:param name="bleed"/>
+	§
+\backslash
+textbf{<xsl:param name="bleed"/>}§
 \end_layout
 
 \begin_layout Plain Layout
@@ -494,17 +1573,25 @@ status open
 
 \begin_layout Plain Layout
 
-					<xsl:attribute name="fox:bleed">
+					§
+\backslash
+textbf{<xsl:attribute name="fox:bleed">}§
 \end_layout
 
 \begin_layout Plain Layout
 
-				      <xsl:value-of select="$bleed" />
+				      §
+\backslash
+textbf{<xsl:value-of select="
+\backslash
+$bleed" />}§
 \end_layout
 
 \begin_layout Plain Layout
 
-				    </xsl:attribute>
+				    §
+\backslash
+textbf{</xsl:attribute>}§
 \end_layout
 
 \end_inset
@@ -512,89 +1599,7 @@ status open
 
 \end_layout
 
-\begin_layout LyX-Code
-
-\end_layout
-
-\begin_layout LyX-Code
-<?xml version="1.0" encoding="UTF-8"?>
-\end_layout
-
-\begin_layout LyX-Code
-<xsl:stylesheet
-\end_layout
-
-\begin_layout LyX-Code
-	xmlns:fo="http://www.w3.org/1999/XSL/Format"
-\end_layout
-
-\begin_layout LyX-Code
-	
-\series bold
-xmlns:fox="http://xmlgraphics.apache.org/fop/extensions"
-\end_layout
-
-\begin_layout LyX-Code
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-\end_layout
-
-\begin_layout LyX-Code
-	xmlns:cmp3="http://www.bitmotion.de/cmp3/cmp3document"
-\end_layout
-
-\begin_layout LyX-Code
-	version="1.0">
-\end_layout
-
-\begin_layout LyX-Code
-	
-\series bold
-<xsl:param name="bleed"/>
-\end_layout
-
-\begin_layout LyX-Code
-		<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
-\end_layout
-
-\begin_layout LyX-Code
-			<fo:layout-master-set>
-\end_layout
-
-\begin_layout LyX-Code
-				<fo:simple-page-master
-\end_layout
-
-\begin_layout LyX-Code
-					page-height="841.889763778pt"
-\end_layout
-
-\begin_layout LyX-Code
-					page-width="595.275590551pt"
-\end_layout
-
-\begin_layout LyX-Code
-					master-name="regular-odd">
-\end_layout
-
-\begin_layout LyX-Code
-					
-\series bold
-<xsl:attribute name="fox:bleed">
-\end_layout
-
-\begin_layout LyX-Code
-
-\series bold
-				      <xsl:value-of select="$bleed" />
-\end_layout
-
-\begin_layout LyX-Code
-
-\series bold
-				    </xsl:attribute>
-\end_layout
-
-\begin_layout Subsubsection
+\begin_layout Subsection
 PDF-X
 \end_layout
 
@@ -610,8 +1615,8 @@ TypoScript setup:
 engine.fop.parameter = -pdfprofile PDF/X-3:2003
 \end_layout
 
-\begin_layout Subsubsection
-output device profile (icc)
+\begin_layout Subsection
+Output device profile (icc)
 \end_layout
 
 \begin_layout Standard
@@ -644,29 +1649,169 @@ status open
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Meta data
 \end_layout
 
-\begin_layout LyX-Code
-			</fo:layout-master-set>
+\begin_layout Standard
+To add meta data to your generated PDF add something like this to your styleshee
+t:
 \end_layout
 
-\begin_layout LyX-Code
-			<fo:declarations> 				<x:xmpmeta xmlns:x="adobe:ns:meta/"> 					<rdf:RDF
- xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> 						<rdf:Description
- 							rdf:about="" 							xmlns:dc="http://purl.org/dc/elements/1.1/"> 							<!
--- Dublin Core properties go here --> 							<dc:title> 								<xsl:call-templa
-te name="title" /> 							</dc:title> 							<dc:creator> 								<xsl:call-temp
-late name="web_address" /> 							</dc:creator> 							<dc:description></dc:desc
-ription> 						</rdf:Description> 						<rdf:Description 							rdf:about=""
- 							xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 							<!-- XMP properties
- go here --> 							<xmp:CreatorTool>Bitmotion CMP3 - www.cross-media.net</xmp:Cre
-atorTool> 						</rdf:Description> 					</rdf:RDF> 				</x:xmpmeta> 			</fo:decl
-arations>
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+...
 \end_layout
 
-\begin_layout Section
+\begin_layout Plain Layout
+
+</fo:layout-master-set>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+<fo:declarations>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<x:xmpmeta xmlns:x="adobe:ns:meta/">
+\end_layout
+
+\begin_layout Plain Layout
+
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+\end_layout
+
+\begin_layout Plain Layout
+
+			<rdf:Description
+\end_layout
+
+\begin_layout Plain Layout
+
+				rdf:about=""
+\end_layout
+
+\begin_layout Plain Layout
+
+				xmlns:dc="http://purl.org/dc/elements/1.1/">
+\end_layout
+
+\begin_layout Plain Layout
+
+				<!-- Dublin Core properties go here -->
+\end_layout
+
+\begin_layout Plain Layout
+
+				<dc:title>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<xsl:call-template name="title" />
+\end_layout
+
+\begin_layout Plain Layout
+
+				</dc:title>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<dc:creator>
+\end_layout
+
+\begin_layout Plain Layout
+
+					<xsl:call-template name="web_address" />
+\end_layout
+
+\begin_layout Plain Layout
+
+				</dc:creator>
+\end_layout
+
+\begin_layout Plain Layout
+
+				<dc:description>
+\end_layout
+
+\begin_layout Plain Layout
+
+				</dc:description>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</rdf:Description>
+\end_layout
+
+\begin_layout Plain Layout
+
+			<rdf:Description
+\end_layout
+
+\begin_layout Plain Layout
+
+				rdf:about=""
+\end_layout
+
+\begin_layout Plain Layout
+
+				xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+\end_layout
+
+\begin_layout Plain Layout
+
+				<!-- XMP properties go here -->
+\end_layout
+
+\begin_layout Plain Layout
+
+				<xmp:CreatorTool>Bitmotion CMP3 - www.cross-media.net</xmp:CreatorTool>
+\end_layout
+
+\begin_layout Plain Layout
+
+			</rdf:Description>
+\end_layout
+
+\begin_layout Plain Layout
+
+		</rdf:RDF>
+\end_layout
+
+\begin_layout Plain Layout
+
+	</x:xmpmeta>
+\end_layout
+
+\begin_layout Plain Layout
+
+</fo:declarations>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 Links
 \end_layout
 

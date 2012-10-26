@@ -15,7 +15,5 @@ CLEAN
 
 NEW
 
-- add task to remove old temp/log files
-
 - add caching
 - GetConfigHash() is present in some classes which might be used in conjunction with caching at some point

@@ -65,7 +65,7 @@ class ExecException extends \Cmp3\Exception {}
  * }
  *
  *
- * 
+ *
  * REVIEWED 15.7.2010 RF
  *
  * @todo what about encoding? Reading ENV and do conversion?
@@ -246,7 +246,7 @@ class Exec {
 			return true;
 		}
 
-		if ($this->blnOnErrorOutputException AND ($this->ExitCode>0)) {
+		if ($this->blnOnExitCodeException AND ($this->ExitCode>0)) {
 			return true;
 		}
 

@@ -50,6 +50,7 @@ class HtmlMakeLinksAbsolute extends ProcessorAbstract {
 	{
 		if ($content = $objContent->GetData()) {
 
+			#TODO BaseUrl should be the same as $server - right?
 			$base = $objContent->Meta->BaseUrl;
 
 			// generate server-only replacement for root-relative URLs

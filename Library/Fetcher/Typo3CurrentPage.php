@@ -43,12 +43,16 @@ class Typo3CurrentPage extends FetcherAbstract {
 	 */
 	public function GetContent()
 	{
+		#TODO  $strUrl = xxx;
+		#FIXME this does not always work
 		$this->strBaseUrl = $GLOBALS['TSFE']->baseUrlWrap('');
 
 		$objProperties = array();
 		$objProperties['Logger'] = $this->objLogger;
 		$objContent = new \Cmp3\Content\Content($objProperties);
 		$objContent->SetData($GLOBALS['TSFE']->content, $this->GetContentType());
+
+		$objContent->Meta->BaseUrl = $this->GetBaseUrl();
 
 		return $objContent;
 	}

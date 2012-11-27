@@ -154,7 +154,7 @@ class File implements FileInterface {
 	 * @return unknown_type
 	 */
 	public function __destruct() {
-		if ($this->blnDeleteOnDestruct) {
+		if ($this->blnDeleteOnDestruct AND !(\Cmp3\Cmp3::$Debug & \Cmp3\Cmp3::DEBUG_TEMPFILES)) {
 			$this->Delete();
 		}
 	}

@@ -50,7 +50,6 @@
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Memory', PATH_cmp3.'Library/Fetcher/Memory.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Typo3CurrentPage', PATH_cmp3.'Library/Fetcher/Typo3CurrentPage.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\File', PATH_cmp3.'Library/Fetcher/File.php');
-\Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\my_t3lib_timeTrack', PATH_cmp3.'Library/Fetcher/Typo3PageHiresImage.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Typo3PageHiresImage', PATH_cmp3.'Library/Fetcher/Typo3PageHiresImage.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\Url', PATH_cmp3.'Library/Fetcher/Url.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Fetcher\FetcherAbstract', PATH_cmp3.'Library/Fetcher/FetcherAbstract.php');
@@ -72,6 +71,7 @@
 \Cmp3\Autoloader::RegisterFile('Cmp3\Composer\PdfIntentionallyBlankPages', PATH_cmp3.'Library/Composer/PdfIntentionallyBlankPages.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Composer\PdfMerge', PATH_cmp3.'Library/Composer/PdfMerge.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Composer\PdfPageCount', PATH_cmp3.'Library/Composer/PdfPageCount.php');
+\Cmp3\Autoloader::RegisterFile('Cmp3\Composer\PdfRepair', PATH_cmp3.'Library/Composer/PdfRepair.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Tools\TimeTravel', PATH_cmp3.'Library/Tools/TimeTravel.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Config\TypoScriptBase', PATH_cmp3.'Library/Config/TypoScriptBase.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Config\Config', PATH_cmp3.'Library/Config/Config.php');
@@ -164,7 +164,6 @@
 \Cmp3\Autoloader::RegisterFile('Zend_Log_Filter_Interface', PATH_cmp3.'Library/Zend/Log/Filter/Interface.php');
 \Cmp3\Autoloader::RegisterFile('Zend_Log_Filter_Priority', PATH_cmp3.'Library/Zend/Log/Filter/Priority.php');
 \Cmp3\Autoloader::RegisterFile('Zend_Log_Writer_Db', PATH_cmp3.'Library/Zend/Log/Writer/Db.php');
-\Cmp3\Autoloader::RegisterFile('Zend_Log_Writer_Firebug', PATH_cmp3.'Library/Zend/Log/Writer/Firebug.php');
 \Cmp3\Autoloader::RegisterFile('Zend_Log_Writer_Stream', PATH_cmp3.'Library/Zend/Log/Writer/Stream.php');
 \Cmp3\Autoloader::RegisterFile('Zend_Log_Writer_Null', PATH_cmp3.'Library/Zend/Log/Writer/Null.php');
 \Cmp3\Autoloader::RegisterFile('Zend_Log_Writer_Mail', PATH_cmp3.'Library/Zend/Log/Writer/Mail.php');
@@ -197,6 +196,7 @@
 \Cmp3\Autoloader::RegisterFile('Cmp3\Cmp3', PATH_cmp3.'Library/Cmp3.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\BaseLogger', PATH_cmp3.'Library/BaseLogger.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Xslt\ProcessorAbstract', PATH_cmp3.'Library/Xslt/ProcessorAbstract.php');
+\Cmp3\Autoloader::RegisterFile('Cmp3\Xslt\Exception', PATH_cmp3.'Library/Xslt/Exception.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Xslt\Processor2', PATH_cmp3.'Library/Xslt/Processor2.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Xslt\Processor1', PATH_cmp3.'Library/Xslt/Processor1.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Xslt\ProcessorInterface', PATH_cmp3.'Library/Xslt/ProcessorInterface.php');
@@ -212,11 +212,11 @@
 \Cmp3\Autoloader::RegisterFile('Cmp3\System\System_standalone', PATH_cmp3.'Library/System/System_standalone.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\System\System_Abstract', PATH_cmp3.'Library/System/System_Abstract.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\System\Exception', PATH_cmp3.'Library/System/Exception.php');
-\Cmp3\Autoloader::RegisterFile('Cmp3\System\ExecException', PATH_cmp3.'Library/System/Exception.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\System\System_t3be', PATH_cmp3.'Library/System/System_t3be.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\System\System_t3fe', PATH_cmp3.'Library/System/System_t3fe.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Pdf\Box', PATH_cmp3.'Library/Pdf/Box.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Pdf\Shrink', PATH_cmp3.'Library/Pdf/Shrink.php');
+\Cmp3\Autoloader::RegisterFile('Cmp3\Pdf\Repair', PATH_cmp3.'Library/Pdf/Repair.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Pdf\InfoData', PATH_cmp3.'Library/Pdf/Info.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Pdf\Info', PATH_cmp3.'Library/Pdf/Info.php');
 \Cmp3\Autoloader::RegisterFile('Cmp3\Pdf\Ghostscript', PATH_cmp3.'Library/Pdf/Ghostscript.php');

@@ -35,6 +35,18 @@ namespace Cmp3;
  */
 abstract class Cmp3 {
 
+	const DEBUG_NONE = 0;
+	const DEBUG_TEMPFILES = 1;
+	const DEBUG_ALL = 0xFFFF;
+
+
+	/**
+	 * Bitmask for debugging
+	 *
+	 * @var integer
+	 */
+	public static $Debug = self::DEBUG_NONE;
+
 	/**
 	 * Path for temporary files
 	 *

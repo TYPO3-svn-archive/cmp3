@@ -75,7 +75,7 @@ class Overlay {
 	public function __construct(array $objPdfFileArray, $objConfig = null)
 	{
 		if (!count($objPdfFileArray)) {
-			throw new Exception ('$objPdfFileArray needs to have at least on element');
+			throw new Exception ('$objPdfFileArray needs to have at least one element');
 		}
 		$this->objPdfFileArray = $objPdfFileArray;
 

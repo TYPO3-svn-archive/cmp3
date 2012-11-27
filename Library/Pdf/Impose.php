@@ -76,7 +76,7 @@ class Impose {
 	 * @param \Cmp3\Files\File $objInputFile
 	 * @param \Cmp3\Config\ConfigInterface $objConfig
 	 * @throws Exception
-	 * @return \Cmp3\Pdf\Shrink
+	 * @return \Cmp3\Pdf\Impose
 	 */
 	public function __construct(\Cmp3\Files\File $objInputFile, $objConfig = null, $objLogger = null)
 	{

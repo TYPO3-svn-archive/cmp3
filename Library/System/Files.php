@@ -730,14 +730,8 @@ abstract class Files {
 	 */
 	public static function GetDownloadHandler()
 	{
-		try {
-			$objDownloadHandler = txApplications::GetCurrent()->Property('DownloadHandler');
-
-		} catch (\Cmp3\UndefinedPropertyException $e) {
-#TODO manual?
-			$propertiesArray = txApplications::GetCurrent()->Config->GetProperties('policies.download');
-			$objDownloadHandler = new \Cmp3\Files\FileDownloadUrl($propertiesArray);
-			txApplications::GetCurrent()->SetProperty('DownloadHandler', $objDownloadHandler);
+		if (class_exists('\tx_next_SystemFiles')) {
+			return \tx_next_SystemFiles::GetDownloadHandler();
 		}
 
 		return $objDownloadHandler;

@@ -152,37 +152,6 @@ abstract class Autoloader {
 		}
 
 
-		// check if Qcodo class is requested and Qcodo is not yet initialized
-		if ($strClassName{0} == 'Q' AND !defined('__QCODO_BASE__') AND !class_exists($strClassName, false)) {
-			// this could happen when a controller is an instance of QForm but _initQcodo() was not called yet which is valid behaviour
-#TODO use \tx_cmp3::ResolvePath('EXT:qcodo/qcodo')
-#@see \Next\Dispatcher
-			// qcodo in 'qcodo' extension (TYPO3 is running)
-			if (defined('TYPO3_MODE') AND TYPO3_MODE) {
-				define ('__QCODO_BASE__', clean_realpath(t3lib_extmgm::extPath('qcodo') . 'qcodo'), false);
-
-			// qcodo in 'qcodo' extension besides the current extension
-			} elseif (@is_dir(clean_realpath(dirname(__FILE__, false) . '/../../qcodo/qcodo/_core'))) {
-				define ('__QCODO_BASE__', clean_realpath(dirname(__FILE__, false) . '/../../qcodo/qcodo'));
-			}
-			// Preload Required Framework Classes
-			if (!class_exists('QBaseClass', false)) {
-                if (file_exists(__QCODO_BASE__))
-				    require(__QCODO_BASE__ . '/_core/framework/QBaseClass.class.php');
-                else
-				    require(PATH_txnext . '/library/Qnext/QBaseClass.class.php');
-			}
-			require(__QCODO_BASE__ . '/includes/prepend.inc.php');
-		}
-
-
-		// Qcodo
-		if (class_exists('QApplication', false)) {
-			if (QApplication::Autoload($strClassName)) {
-				return true;
-			}
-		}
-
 		$strClassName = preg_replace('#Zend_#', '', $strClassName);
 
 		foreach (self::$classFolder as $folder) {

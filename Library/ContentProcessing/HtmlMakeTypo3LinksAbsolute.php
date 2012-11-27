@@ -51,7 +51,10 @@ class HtmlMakeTypo3LinksAbsolute extends ProcessorAbstract {
 	{
 		if ($content = $objContent->GetData()) {
 
-			$content = preg_replace_callback('/(<a [^>]*href=\")(?!#)(.*?)(\")/',
+			$content = preg_replace_callback('/( href=\")(?!#)(.*?)(\")/',
+			                                       array('self','_fix_links_callback'), $content );
+
+			$content = preg_replace_callback('/( src=\")(?!#)(.*?)(\")/',
 			                                       array('self','_fix_links_callback'), $content );
 
 			$content = preg_replace_callback('/(<form [^>]*action=\")(?!#)(.*?)(\")/',
@@ -71,7 +74,7 @@ class HtmlMakeTypo3LinksAbsolute extends ProcessorAbstract {
 	 * @private
 	 */
 	function _fix_links_callback($matches) {
-		return $matches[1].t3lib_div::locationHeaderUrl($matches[2]).$matches[3];
+		return $matches[1].\t3lib_div::locationHeaderUrl($matches[2]).$matches[3];
 	}
 
 }
